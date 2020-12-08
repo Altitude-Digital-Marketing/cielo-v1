@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>AGUA CIELO</title>
+
+	<!-- <link href="examples/fixed-positioning.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="src/main.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="src/burbujas.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="src/style.css"> <!-- borrar -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+
+</head>
+
+<body>
+<header class="cd-header">
+	<div class="header-wrapper">
+		<div class="logo-wrap">
+			<a href="#" class="hover-target"><span>your</span>logo</a>
+		</div>
+		<div class="nav-but-wrap">
+			<div class="menu-icon hover-target">
+				<span class="menu-icon__line menu-icon__line-left"></span>
+				<span class="menu-icon__line"></span>
+				<span class="menu-icon__line menu-icon__line-right"></span>
+			</div>					
+		</div>					
+	</div>				
+</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">studio</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">news</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">contact</a></li>
+			</ul>
+		</div>
+	</div>	
+	
+	<div class="section full-height over-hide">	
+		<div class="switch-wrap">
+			<h1>overlay menu</h1>
+			<div id="switch" class="hover-target">
+				<div id="circle"></div>
+			</div>
+			<p><span>dark</span> - <span>light</span></p>
+		</div>
+	</div>	
+
+
+  	<div class="wrapper">
+  	  <button role="button" class="menu-toggle" id="hamburger-icon">
+	  	<span class="icon-bars"></span>
+	  </button>
+	</div>
+
+  <!-- Slide Left Menu -->
+  <div class="slide-menu">
+    <div class="slide-menu-here">
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Portafolio</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="#">Cielo Alcalina</a></li>
+        <li><a href="#">Seguridad y Salud</a></li>
+        <li><a href="#">Compromiso</a></li>
+        <li><img src="src/images/blanco.png" alt=""></li>
+		<!-- 	<li class="title"><span>Categoires</span><div class="dropdownmenu"></div>
+		          <ul class="sub-menu">
+		            <li><a href="#">Sports</a>          </li>
+		          </ul>
+		        </li> -->
+      </ul>
+    </div>
+  </div>
+
+	<div id="bg1" 
+	data-0="background-position:0px 0px;" 
+	data-500="background-position:0px -400px;"
+	data-800="background-position:0px -600px;"
+	data-end="background-position:0px 0px;">
+
+	
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+	</div>
+	<!-- <div class="gap gap-100" style="background-image:url(src/images/bg2.jpg);"></div> -->
+ 	<div id="bg2" 
+ 	data-200="background-position:0px 400px;" 
+ 	data-800="background-position:0px -200px;"
+ 	data-4800="background-position:0px -200px;"
+ 	data-end="background-position:0px -8000px;"></div>
+<!--	<div id="bg3" data-400="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div> -->
+
+	<!-- <div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div> -->
+
+	<!-- Título Inicial -->
+	<div id="titulo" 
+	data-0="opacity:1;top:40%;left:10%;transform:rotate(0deg);transform-origin:50% 60%;" 
+	data-500="opacity:0;top:-10%;transform:rotate(0deg);">
+		<h1><a class="animate__animated animate__fadeIn animate__slower" href="#burbujas">Eleva tu vida</a></h1>
+	</div>
+	
+	<!-- BOTELLA CENTRO -->
+	<div id="intro" 
+	data-0="opacity:1;top:20%;transform:rotate(25deg);transform-origin:50% 60%;" 
+	data-400="opacity:0;top:-10%;transform:rotate(0deg);"
+	data-1000="opacity:0;top:-10%;transform:rotate(0deg);transform:scale(0.5)"
+	data-1200="opacity:1;top:-10%;transform:rotate(0deg);transform:scale(0.5)">
+		<img width="70%" class="animate__animated animate__bounceInDown animate__slower" src="src/images/botella.png" alt="">
+	</div>
+
+	<!-- BURBUJAS BOTELLA PEQUEÑA -->
+	<div id="burbujas"
+	data-1200="opacity:0;transform:rotate(0deg);transform:scale(1)"
+	data-1400="opacity:1;transform:rotate(0deg);transform:scale(0.15)">
+		<div id="background-wrap2">
+	    <div class="bubble x1"></div>
+	    <div class="bubble x2"></div>
+	    <div class="bubble x3"></div>
+	    <div class="bubble x4"></div>
+	    <div class="bubble x5"></div>
+	    <div class="bubble x6"></div>
+	    <div class="bubble x7"></div>
+	    <div class="bubble x8"></div>
+	    <div class="bubble x9"></div>
+	    <div class="bubble x10"></div>
+		</div>
+	</div>
+
+	<!-- VIDEO Escena 1 -->
+	<div id="transform" 
+	data-400="transform:scale(0) rotate(0deg);;" 
+	data-550="transform:scale(1) rotate(0deg);opacity:1;" 
+	data-1200="top:0" 
+	data-1400="transform:scale(0) rotate(0);opacity:0; top:-500%">
+		<h2>Click Para ver video</h2>
+		<a href="#"><img src="src/images/videocover.jpg" width="75%" alt=""></a>
+<!-- 		<div id="background-wrap">
+	    <div class="bubble x1"></div>
+	    <div class="bubble x2"></div>
+	    <div class="bubble x3"></div>
+	    <div class="bubble x4"></div>
+	    <div class="bubble x5"></div>
+	    <div class="bubble x6"></div>
+	    <div class="bubble x7"></div>
+	    <div class="bubble x8"></div>
+	    <div class="bubble x9"></div>
+	    <div class="bubble x10"></div>
+		</div> -->
+	</div>
+
+	<!-- PANELES ESCENA 3 -->
+	<div id="ph-neutro" class="floating" 
+	data-1700="top:100%;" 
+	data-2200="top:30%;" 
+	data-3000="display:block;" 
+	data-3700="top:-100%;display:none;">
+		<h2> <a href="#transform" >click</a>PH</h2>
+		<p>Neutro</p>
+
+		<h2>Agua</h2>
+		<p>Purificada</p>
+	</div>
+
+	<div id="ph-neutro2" class="floating"
+	data-1700="top:100%;" 
+	data-2200="top:30%;" 
+	data-3000="display:block;" 
+	data-3700="top:-100%;display:none;">
+		<h2>Libre de</h2>
+		<p>Sodio</p>
+
+		<h2>Envasada con</h2>
+		<p>Altos Estandares de Calidad</p>
+
+	</div>
+
+	<!-- PANELES ESCENA 4 -->
+	<div id="botella1" class="floating"
+	data-3300="top:100%;" 
+	data-3800="top:31.5%;" 
+	data-4600="top:31.5; display:block;" 
+	data-5100="top:-100%;display:none;">
+		<h2>Libre de</h2>
+		<p>Sodio</p>
+
+		<h2>Envasada con</h2>
+		<p>Altos Estandares de Calidad</p>
+
+	</div>
+
+
+	<div id="botella3" class="floating"
+	data-3300="top:100%;" 
+	data-3800="top:31.5%;" 
+	data-4600="top:31.5; display:block;" 
+	data-5100="top:-100%;display:none;">
+		<h2>Libre de</h2>
+		<p>Sodio</p>
+
+		<h2>Envasada con</h2>
+		<p>Altos Estandares de Calidad</p>
+
+	</div>
+
+<!-- 	<div id="intro" data-0="opacity:1;top:20%;transform:rotate(0deg);transform-origin:0 0;" data-500="opacity:0;top:-10%;transform:rotate(-90deg);">
+		<h1><a href="https://github.com/Prinzhorn/skrollr">skrollr</a></h1>
+		<h2>parallax scrolling for the masses</h2>
+		<p>let's get scrollin' ;-)</p>
+		<p class="arrows">▼&nbsp;▼&nbsp;▼</p>
+	</div> -->
+
+<!-- 	<div id="slide3" 
+		data-200="top:100%;" 
+		data-400="top:-20%;" 
+		data-1600="display:block;" 
+		data-2000="top:-100%;display:none;">
+		<h2>all numeric properties</h2>
+		<p>width, height, padding, font-size, z-index, blah blah blah</p>
+
+	</div> -->
+<!-- 	<div id="transform" data-500="transform:scale(0) rotate(0deg);" data-1000="transform:scale(1) rotate(1440deg);opacity:1;" data-1600="" data-1700="transform:scale(5) rotate(3240deg);opacity:0;">
+		<h2>transform</h2>
+		<p>scale, skew and rotate the sh** out of any element</p>
+	</div> -->
+
+
+
+
+
+	<div id="download" data-10000="top[cubic]:100%;border-radius[cubic]:0em;background:rgb(0,50,100);border-width:0px;" data-12000="top:10%;border-radius:2em;background:rgb(190,230,255);border-width:10px;">
+		<h2>the end</h2>
+		<p>by the way, you can also animate colors (you did notice this, didn't you?)</p>
+		<p><strong>Now get this thing on <a href="https://github.com/Prinzhorn/skrollr">GitHub</a> and spread the word, it's open source!</strong> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://prinzhorn.github.com/skrollr/" data-via="Prinzhorn">Tweet</a>
+		</p>
+	</div>
+
+	<div id="scrollbar" data-0="top:0%;margin-top:2px;" data-end="top:100%;margin-top:-52px;"></div>
+
+	<script type="text/javascript" src="dist/skrollr.min.js"></script>
+	<script type="text/javascript" src="src/skrollr.menu.min.js"></script>
+
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<!-- Overlay dependennces -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script  src="src/script.js"></script>
+		<!-- Get minor updates and patch fixes within a major version -->
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="../skrollr-ie/dist/skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+
+	//The options (second parameter) are all optional. The values shown are the default values.
+	skrollr.menu.init(s, {
+		//skrollr will smoothly animate to the new position using `animateTo`.
+		animate: true,
+		//The easing function to use.
+		easing: 'sqrt',
+		//Multiply your data-[offset] values so they match those set in skrollr.init
+		scale: 2,
+		//How long the animation should take in ms.
+		duration: function(currentTop, targetTop) {
+			//By default, the duration is hardcoded at 500ms.
+			return 1000;
+			//But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
+			//return Math.abs(currentTop - targetTop) * 10;
+		},
+		//If you pass a handleLink function you'll disable `data-menu-top` and `data-menu-offset`.
+		//You are in control where skrollr will scroll to. You get the clicked link as a parameter and are expected to return a number.
+		handleLink: function(link) {
+			return 500;//Hardcoding 400 doesn't make much sense.
+		},
+		complexLinks: false,
+		//This event is triggered right before we jump/animate to a new hash.
+		change: function(newHash, newTopPosition) {
+			//Do stuff
+		},
+		//Add hash link (e.g. `#foo`) to URL or not.
+		updateUrl: false //defaults to `true`.
+	});
+		// All animations will take exactly 500ms
+		var scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 2000,
+			speedAsDuration: true
+		});
+	// In case users value their laptop battery life
+	// Allow them to turn the bubbles off
+
+
+	/* ------------------------------------ */	
+	/*  MTD Menu
+	/* ------------------------------------ */	
+	$(document).ready(function(){
+	$('.menu-toggle').on('click', function() {
+	  $('.wrapper').toggleClass('menu--is-revealed');
+	});	  
+	// Menu Add Class Left
+		$("#hamburger-icon").click(function(){
+		$(".slide-menu").toggleClass("slide-left");
+	});
+
+	//  Menu Add Class Close 		
+	$('.slide-close-button button, .mdl-layout__obfuscator').click(function(){
+	    $(".slide-menu").removeClass("slide-left");
+	});
+	// Menu Dropdown menu active
+		$(".dropdownmenu").click(function(){
+		$(".sub-menu").toggleClass("active"),fadeIn(46000);
+	});
+	});
+	</script>
+</body>
+
+</html>
