@@ -37,6 +37,11 @@
     left: 20%;
     z-index: 100;
 }
+.compromiso{
+	z-index: 150;
+    height: 100vh;
+    align-items: center;
+}
 
 /*.box {
   height: 60px;
@@ -115,7 +120,7 @@
 	<div class='cursor3' id="cursor3"></div>
 
 	<div id="stage">
-    	<div class="box box6"><img class="animate__animated animate__bounceInDown bottle" src="src/images/botella.png" alt=""></div>
+    	<div class="box box6"><img class="animate__animated animate__bounceInDown floating bottle" src="src/images/botella.png" alt=""></div>
     </div>
     <!-- The video -->
 <video autoplay muted loop id="myVideo">
@@ -128,7 +133,7 @@
     <div class="pinWrapper">
       	<div class="image"></div>
 		<div class="container">
-			 <div class="row">
+			 <div class="row w-100">
 			 	<div class="col-5 head1">
 			 		<img class="animate__animated animate__fadeIn animate__slower" src="src/images/heading1.png" alt="">
 			 	</div>
@@ -160,18 +165,18 @@
 
   <!-- escena 2 -->
   <div id="test2" class="event event2">
-		<div class="row mt-5 pt-5 position-relative" style="z-index: 150; ">
+		<div class="row mt-5 pt-5 position-relative compromiso" style="z-index: 150; ">
 			<div class="col-2 text-center"></div>
 			<div class="col-3 text-right">
-				<img class="animate__animated animate__bounceInLeft floating " width="150px" src="src/images/Sin-título-1.png" alt="">
-				<img class="animate__animated animate__bounceInLeft floating " width="180px" src="src/images/ag-puri.png" alt="">
+				<img class="animate__animated animate__bounceInLeft floating " width="150px" src="src/images/neutrob.png" alt="">
+				<img class="animate__animated animate__bounceInLeft floating " width="180px" src="src/images/ag-purib.png" alt="">
 			</div>
 			<div class="col-2 text-center">
 
 			</div>
 			<div class="col-3 text-left">
-				<img class="animate__animated animate__bounceInRight floating " width="200px" src="src/images/libr-sodio.png" alt="">
-				<img class="animate__animated animate__bounceInRight floating " width="200px" src="src/images/envasada-standares.png" alt="">
+				<img class="animate__animated animate__bounceInRight floating " width="200px" src="src/images/libr-sodiob.png" alt="">
+				<img class="animate__animated animate__bounceInRight floating " width="200px" src="src/images/envasada-standaresb.png" alt="">
 			</div>
 			<div class="col-2 text-center"></div>
 		</div>
@@ -185,21 +190,35 @@
 		<div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
 			<div class="col-2 text-center"></div>
 			<div class="col-3 text-right">
-				<img class="animate__animated animate__bounceInLeft floating " style="position: relative; bottom: -7%;"  src="src/images/personal.png" alt="">
-			</div>
-			<div class="col-2 text-center">
+					<img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt="">
+				</div>
+				<div class="col-2 text-center">
 
-			</div>
-			<div class="col-3 text-left">
-				<img class="animate__animated animate__bounceInRight floating " style="position: relative;bottom: -7%;"  src="src/images/3.5litros.png" alt="">
-				
-			</div>
+				</div>
+				<div class="col-3 text-left">
+					<img class="animate__animated animate__bounceInRight floating " style="position: relative;bottom: 0%;"  src="src/images/3.5litros.png" alt="">
+					
+				</div>
 			<div class="col-2 text-center"></div>
 		</div>
     </div>
   </div>
 
-
+  <div id="test4" class="event event4">
+    <div class="pinWrapper">
+      <div class="image"></div>
+		<div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
+			<div class="col-2 text-center"></div>
+			<div class="col-8 text-left">
+				<h3>compromiso</h3> 
+				<p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+				<p>lorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+				lorem ipsumlorem ipsumlorem ipsum</p>
+			</div>
+			<div class="col-2 text-center"></div>
+		</div>
+    </div>
+  </div>
   
 </section>
 
@@ -292,7 +311,7 @@ new ScrollMagic.Scene({
 	var tl = new TimelineMax();
 	tl.to('.box', 0.5, {
 		xPercent: '+=50',
-	  	rotation:45,
+	  	rotation:25,
 
 	}).to('.box', 1.5, { // movimiento escena 1 
 		xPercent: '+=0',
@@ -341,6 +360,24 @@ new ScrollMagic.Scene({
 	// .addIndicators() //debug
 	.addTo(controller);
 
+
+
+	/* ------------------------------------ */
+	/*  Escena Hotspots
+	/* ------------------------------------ */
+	var tl4 = new TimelineMax();  tl4.to('.bottle', 0.5 , { xPercent: '+=50'  })/*.to('.box4', 13 , {  opacity:1 })Fade In Hotspot*/
+	var scene4 = new ScrollMagic.Scene({triggerElement: ".compromiso" }).setTween(tl4).addTo(controller);/*hotspots Play Escena*/
+	var tl4b = new TimelineMax();  tl4b.to('.box4', 0.5 , { opacity:0, yPercent: '-=150'  })/*Fade Out Hotspot*/
+	var scene4b = new ScrollMagic.Scene({triggerElement: ".event3" }).setTween(tl4b).addTo(controller);/*hotspots Play Escena*/
+
+
+	/* ------------------------------------ */
+	/*  Escena Video.
+	/* ------------------------------------ */
+	var tl5 = new TimelineMax();  tl5.to('.box', 0.2 , {  xPercent: '-=50', yPercent: '-=500px' }).to('.video1', 1 , { opacity:1  })/*Fade In Hotspot*/
+	var scene5 = new ScrollMagic.Scene({triggerElement: ".event2" }).setTween(tl5).addTo(controller);/*Mandala Play Escena*/
+	var tl5b = new TimelineMax();  tl5b.to('.video1', 0.5 , { opacity:0  })/*Fade Out Hotspot*/
+	var scene5b = new ScrollMagic.Scene({triggerElement: ".event3" }).setTween(tl5b).addTo(controller);/*Mandala Play Escena*/
 
 
 
