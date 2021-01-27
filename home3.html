@@ -15,7 +15,7 @@
 		top: 28vh;
 	    left: 2%;
 	}
-	.portafolio-item{
+	.portafolio-item, .personal-spec{
 		opacity: 0;
 	}
 
@@ -55,7 +55,10 @@
 	.hotspots2{
 		background-color: #00316566;
 		padding: 2em;
-		width: auto;
+		width: 190px;
+	}
+	.hotspots2>img{
+		width: 85%;
 	}
 	.bottle{
 		position: absolute;
@@ -89,7 +92,7 @@
 	<header id="eventos" class="cd-header">
 		<div class="header-wrapper">
 			<div class="logo-wrap">
-				<a href="#" class="hover-target"><img src="src/images/blanco.png" width="150px" alt=""></a>
+				<a href="#" class="hover-target"><img style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(3px 3px 2px #22222245);" src="src/images/blanco.png" width="150px" alt=""></a>
 			</div>
 			<div class="nav-but-wrap">
 				<div class="menu-icon hover-target">
@@ -183,13 +186,13 @@
 			    <div style="top: 30%; left: 46%;" class="lg-hotspot lg-hotspot--top-right">
 			        <div class="lg-hotspot__button"></div>
 		      		<div class="lg-hotspot__label hotspots2">
-		        		<img src="src/images/neutrob.png" alt="">
+		        		<img style="width: 70%;" src="src/images/neutrob.png" alt="">
 		       		</div>
 			    </div>
 			    <div style="top: 48%; left: 46%;" class="lg-hotspot lg-hotspot--top-right">
 			        <div class="lg-hotspot__button"></div>
 		      		<div class="lg-hotspot__label hotspots2">
-		        		<img src="src/images/envasada-standaresb.png" alt="">
+		        		<img src="src/images/es-cl.png" alt="">
 		       		</div>
 			    </div>
 			    <div style="top: 43%; right: 40%;" class="lg-hotspot lg-hotspot--top-left">
@@ -202,20 +205,21 @@
 			      	<div class="lg-hotspot__button"></div>
 			      	<div class="lg-hotspot__label hotspots2">
 			        	<!-- <h4>Asa Para Fácil Manipulación</h4> -->
-			        	<img class="p-3" src="src/images/libr-sodiob.png" alt="">
+			        	<img src="src/images/libr-sodiob.png" alt="">
 			      	</div>
 			    </div>
 			</div>
 			<!-- FIN hotspots -->
 	  	</div>
-
+	  	<!-- escena 3 -->
 	  	<div id="test3" class="event event3">
 		    <div class="pinWrapper ">
 		      	<div class="image"></div>
+		      	<!-- botellas portafolio -->
 				<div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
 					<div class="col-2 text-center"></div>
 					<div class="col-3 text-right portafolio-item botella-personal">
-						<a href="#"><img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt=""></a>
+						<a href="#b-personal"><img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt=""></a>
 					</div>
 					<div class="col-2 text-center"></div>
 					<div class="col-3 text-left portafolio-item botella-3litros">
@@ -224,9 +228,10 @@
 					<div class="col-2 text-center"></div>
 				</div>
 				<!-- <div class="container position-relative" style="z-index: 150; top: -90%;"> a</div> -->
+				<!-- Fin botellas portafolio -->
 		    </div>
 	  	</div>
-
+	  	<!-- escena 4 -->
 		<div id="b-personal" class="event event4">
 		    <div class="pinWrapper ">
 		    	<div class="image"></div>
@@ -236,9 +241,12 @@
 						<img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt="">
 					</div>
 					<div class="col-3 text-left personal-spec"> <br> <br> <br><br><br>
-						<h2 class="text-white pt-5">CIELO PERSONAL</h2> <br> <br>
+						<h2 class=" heading text-white pt-5"><strong>CIELO PERSONAL</strong></h2> <br> <br>
 						<h3 class="text-white"> <strong>Precio:</strong> $ 0.30 </h3>
 						<h3 class="text-white"> <strong>Cantidad:</strong> 625 ml </h3>
+						<h3 class="text-white"> <strong>Unidades por Empaque:</strong> 12 unidades </h3>
+						<br><br><br>
+						<a href="#test3" class="text-white">Volver</a>
 					</div>
 					<div class="col-2 text-center"></div>
 					<div class="col-2 text-center"></div>
@@ -272,7 +280,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<script  src="src/script.js"></script>
 	<!-- Scrollmagic dependennces -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
 	<!-- debug -->
@@ -428,7 +436,8 @@
 	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerElement: ".event4",offset: -300  }).setTween(tl4b).addTo(controller);/*Persistiendo botella 1 play Escena*/
 	var tl4b = new TimelineMax();  tl4b.to('.bottle', 0.2 , { opacity:0, yPercent: '-=500px' }).to('.botella-3litros', 1 , { opacity:0, yPercent: '+=500px'  })/*Fade Out persistiendo botella 1*/
 	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerElement: ".event4",offset: -300  }).setTween(tl4b).addTo(controller);/*Persistiendo botella 1 play Escena*/
-
+	var tl4c = new TimelineMax();  tl4c.to('.botella-personal', 0.4 , { xPercent: '-=50',scaleX: 1.5, scaleY: 1.5, }).to('.personal-spec', 1 , { opacity:1  })/*Fade Out persistiendo botella 1*/
+	var scene4c = new ScrollMagic.Scene({triggerElement: ".event4",offset: 200  }).setTween(tl4c).addTo(controller);/*Persistiendo botella 1 play Escena*/
 	$(document).ready(function () {
 		/* ------------------------------------ */
 		/*  Hotspot Características

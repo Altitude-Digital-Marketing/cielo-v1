@@ -83,7 +83,7 @@
     z-index: 10;
     display: flex;
     width: 100%;
-    top: 15vh;
+    top: 30vh;
 	/*margin: -50px 0 0 -50px;*/
 	/*background-color: #000;*/
 }
@@ -109,6 +109,32 @@
     width: 100%;
     background-repeat: no-repeat;
 }
+.hotspots-img{
+	    width: 75px;
+    height: 75px;
+    margin-top: 9px;
+    margin-bottom: -5px;
+}
+.hotspots-img2{
+	width: 75px;
+    height: 75px;
+    margin-bottom: -15px;
+}
+.lg-hotspot--top-left .lg-hotspot__label {
+    top: 24px;
+    left: 24px;
+    display: flex;
+}
+.hstyle{
+	/*background: #001e51;*/
+    color: #fefefe;
+}
+.nav:after {
+    background: #001e51;
+}
+.nav__list-item a {
+    color: rgb(255 255 255 / 80%);
+}
 	</style>
 </head>
 
@@ -126,23 +152,23 @@
 					<span class="menu-icon__line"></span>
 					<span class="menu-icon__line menu-icon__line-right"></span>
 				</div>					
-			</div>					
+			</div>	
 		</div>				
 	</header>
 	<div class="nav">
 		<div class="nav__content">
 			<ul class="nav__list">
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test1">Inicio</a></li>
-		        <li class="nav__list-item"><a class="hover-target p-3" href="#test1b">Cielo</a></li>
-		        <li class="nav__list-item"><a class="hover-target p-3" href="#test2">Características</a></li>
-		        <li class="nav__list-item"><a class="hover-target p-3" href="#test3">Portafolio</a></li>
-		        <li class="nav__list-item"><a class="btn-bubble p-3" href="#">Cielo Alcalina</a></li>
+		        <li class="nav__list-item"><a class="hover-target p-3" href="#test1b">Características</a></li>
+		        <li class="nav__list-item"><a class="hover-target p-3" href="#test2"></a></li>
+		        <li class="nav__list-item"><a class="hover-target p-3" href="#test3">Volver a Cielo Original</a></li>
+<!-- 		        <li class="nav__list-item"><a class="btn-bubble p-3" href="#">Cielo Alcalina</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-two">Seguridad y Salud</a></li>
-		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-three">Compromiso</a></li>
-		<!-- <li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li> -->
+		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-three">Compromiso</a></li> -->
+		<!-- 	<li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li> 	-->
 			</ul>
 		</div>
-	</div>	
+	</div>
 	<!-- <div class='cursor' id="cursor"></div> -->
 	<div class='cursor2' id="cursor2"></div>
 	<div class='cursor3' id="cursor3"></div>
@@ -156,105 +182,100 @@
 		    <img class="lg-image invisible w-25"
 		      src="src/images/3.5litros.png" />
 
-		    <div style="top: 21%; left: 53%;" class="lg-hotspot lg-hotspot--top-right">
+		    <div style="top: 21%; left: 39vw;" class="lg-hotspot lg-hotspot--top-right">
 		      <div class="lg-hotspot__button"></div>
 		      <div class="lg-hotspot__label">
-		        <h4>Agua purificada envasada sin gas</h4>
-		        
+		        <!-- <h4>Agua purificada envasada sin gas</h4> -->
 		      </div>
 		    </div>
 
-		    <div style="top: 35%; right: 33%;" class="lg-hotspot lg-hotspot--top-left">
-		      <div class="lg-hotspot__button"></div>
-		      <div class="lg-hotspot__label">
-		        <h4>Calidad </h4>
-		        <p>
-		          Envasada con altos estándares de calidad.
-		        </p>
-		      </div>
+		    <div style="top: 35%; right: 33vw;" class="lg-hotspot lg-hotspot--top-left">
+		      	<div class="lg-hotspot__button"></div>
+		      		<div class="lg-hotspot__label">
+			        <!-- <h4>Calidad </h4> -->
+			        <img class="hotspots-img p-3" src="src/images/equality.png" alt="">
+			        <p> Envasada con altos estándares de calidad. </p>
+		      	</div>
 		    </div>
 
-		    <div style="top: 13.5%; left: 58%;" class="lg-hotspot lg-hotspot--top-right">
-		      <div class="lg-hotspot__button"></div>
-		      <div class="lg-hotspot__label">
-		        <h4>Asa Para Fácil Manipulación</h4>
-		        <img width="100%" class="p-3" src="src/images/ft1.png" alt="">
-		      </div>
+		    <div style="top: 13.5%; left: 44vw;" class="lg-hotspot lg-hotspot--top-left">
+		      	<div class="lg-hotspot__button"></div>
+		      		<div class="lg-hotspot__label">
+			        <!-- <h4>Calidad </h4> -->
+			        <img class="hotspots-img2 p-3" src="src/images/asa.png" alt="">
+			        <p> Asa para fácil Manipulación. </p>
+		      	</div>
 		    </div>
 		</div>
-
     </div>
+
     <!-- The video -->
 <video autoplay muted loop id="myVideo">
-  <source src="src/bg2.mp4" type="video/mp4">
+  	<source src="src/bg22.mp4" type="video/mp4">
 </video>
 
 <section class="events-page">
 
-  <div id="test1" class="event event1">
-    <div class="pinWrapper">
-      	<div class="image"></div>
-    	<div class="image2 animate__animated animate__fadeOut animate__delay-3s animate__slower"></div>
-		<div class="container">
-			 <div class="row">
-			 	<div class="col-5 head1">
-			 		<!-- <img class="animate__animated animate__fadeIn animate__slower" src="src/images/heading1.png" alt=""> -->
-			 	</div>
-			 	<div class="col-7">
-			 	</div>
-			 </div>
-		</div> 
-    </div>
-  </div>
-
-  <!-- escena 1 -->
-  <div id="test1b" class="event event1b">
-    <div class="pinWrapper">
-
-
-		<div class="row mt-5 pt-5 position-relative" style="z-index: 150">
-			<div class="col-2"></div>
-			<div class="col-8">
-			
-				<!-- <h2>Introducción</h2>
-				<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-			</div>
-			<div class="col-2"></div>
-			
+	<div id="test1" class="event event1">
+		<div class="pinWrapper">
+		  	<div class="image"></div>
+			<div class="image2 animate__animated animate__fadeOut animate__delay-3s animate__slower"></div>
+			<div class="container">
+				 <div class="row">
+				 	<div class="col-5 head1">
+				 		<!-- <img class="animate__animated animate__fadeIn animate__slower" src="src/images/heading1.png" alt=""> -->
+				 	</div>
+				 	<div class="col-7">
+				 	</div>
+				 </div>
+			</div> 
 		</div>
-		<div class="image"></div>
-    </div>
-  </div>
+	</div>
 
-  <!-- escena 2 -->
-  <div id="test2" class="event event2">
+	<!-- escena 1 -->
+	<div id="test1b" class="event event1b">
+		<div class="pinWrapper">
+			<div class="row mt-5 pt-5 position-relative" style="z-index: 150">
+				<div class="col-2"></div>
+				<div class="col-5">
+					<!-- <h2>Introducción</h2>
+					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+				</div>
+				<div class="col-3"></div>
+				<div class="col-2"></div>
+			</div>
+			<div class="image"></div>
+		</div>
+	</div>
+
+	<!-- escena 2 -->
+	<div id="test2" class="event event2">
 		<div class="row mt-5 pt-5 position-relative" style="z-index: 150; ">
 			<div class="col-2"></div>
-			<div class="col-8 video1">
-			
-				<h2>Nueva Cielo Alkalina</h2>
-				<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<div class="col-5 mt-3 pr-1 video1">
+				<h2 class="hstyle p-3">Nueva Cielo Alcalina</h2>
+				<iframe class="video-embed" width="100%" height="350vh" src="https://www.youtube.com/embed/OfKxQQEa9JQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
+			<div class="col-3"></div>
 			<div class="col-2"></div>
 		</div>
-  </div>
+	</div>
 
 
-  <div id="test3" class="event event3">
-    <div class="pinWrapper">
-
-      <div class="image"></div>
-		<div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
-			<div class="col-2"></div>
-			<div class="col-8 video2">
-			
-				<h2>Nueva Cielo Alkalina Video 2</h2>
-				<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<div id="test3" class="event event3">
+		<div class="pinWrapper">
+		  <div class="image"></div>
+			<div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
+				<div class="col-2"></div>
+				<div class="col-5 pr-1 video2">
+					<h2 class="hstyle p-3">Nueva Cielo Alkalina Video 2</h2>
+					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				<div class="col-3"></div>
+				<div class="col-2"></div>
 			</div>
-			<div class="col-2"></div>
 		</div>
-    </div>
-  </div>
+	</div>
 
 </section>
 
@@ -266,7 +287,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script  src="src/script.js"></script>
 <!-- Scrollmagic dependennces -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
 <!-- debug -->
@@ -387,7 +408,7 @@
 	/* ------------------------------------ */
 	var tl4 = new TimelineMax();  tl4.to('.box4', 0.5 , { opacity:1  })/*.to('.box4', 13 , {  opacity:1 })Fade In Hotspot*/
 	var scene4 = new ScrollMagic.Scene({triggerElement: ".event1b" }).setTween(tl4).addTo(controller);/*hotspots Play Escena*/
-	var tl4b = new TimelineMax();  tl4b.to('.box4', 0.5 , { opacity:0, yPercent: '-=150'  })/*Fade Out Hotspot*/
+	var tl4b = new TimelineMax();  tl4b.to('.box4', 0.5 , { opacity:0  })/*Fade Out Hotspot*/
 	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2" }).setTween(tl4b).addTo(controller);/*hotspots Play Escena*/
 
 	/* ------------------------------------ */
@@ -422,7 +443,6 @@
 		(() => {  const buttons = document.querySelectorAll(".lg-hotspot__button");
 		  buttons.forEach(button => { button.addEventListener("click", selectHotspot); }); })();
 	});
-
 
 	</script>
 </body>
