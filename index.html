@@ -18,20 +18,21 @@
 	}
 
 	.box {
-	    /*height: 60px;*/
+	    /*height: 42vh;*/
+	    height: 100%;
 	    width: 60%;
 	    align-items: center;
 	    margin: 4px;
 	    font-size: 1.2em;
-	    /*position: absolute;*/
-	        position: fixed;
+	    /* position: absolute; */
+	    position: fixed;
 	    font-weight: 700;
 	    color: white;
 	    border-radius: 4px;
 	    display: flex;
 	    justify-content: center;
 	    flex-wrap: wrap;
-	    top: 5%;
+	    /* top: 5%; */
 	    left: 20%;
 	    z-index: 100;
 	}
@@ -59,7 +60,7 @@
 		width: 85%;
 	}
 	.bottle{
-		position: absolute;
+		/*position: absolute;*/
 	    z-index: 10;
 	    display: flex;
 		/*	    width: 100%; cambiada por la botella con nuevo tamaño
@@ -85,15 +86,15 @@
 
 
 	/*borrar*/
-/*	.event1b .image {
-    background: #ffff001f;
+	.event1b .image {
+    	background: #ffff001f;
 	}
 	.event2 {
 	    background-color: #900b3429;
 	}
 	.event3 {
-    background-color: #00000054;
-}*/
+    	background-color: #00000054;
+	}
 	</style>
 </head>
 
@@ -168,7 +169,7 @@
 				<div class="col-2"></div>
 				<div class="col-8" id="alka" style="opacity: 0;">
 					<h2 class="text-white py-2">Introducción</h2>
-					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/KCLNS5afAuA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<div class="col-2"></div>
 			</div>    		
@@ -208,14 +209,14 @@
     	<!-- OBJETO PORTAFOLIO -->
     		<div class="container-fluid position-fixed h100" id="portafolio" style="z-index: 152;">
     			
-				<div class="row mt-5 pt-5 position-relative">
+				<div class="row mt-5 pt-5 position-relative h100">
 					<div class="col-2 text-center"></div>
-					<div class="col-3 text-right portafolio-item botella-personal">
-						<a href="#b-personal"><img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt=""></a>
+					<div class="col-3 text-right portafolio-item botella-personal align-self-center">
+						<a href="#b-personal"><img class="animate__animated animate__bounceInLeft floating " style="/*position: relative; margin-top: 40%; */"  src="src/images/personal.png" alt=""></a>
 					</div>
 					<div class="col-2 text-center"></div>
-					<div class="col-3 text-left portafolio-item botella-3litros">
-						<a href="#"><img class="animate__animated animate__bounceInRight floating " style="position: relative;bottom: 0%;"  src="src/images/3.5litros.png" alt=""></a>
+					<div class="col-3 text-left portafolio-item botella-3litros align-self-center">
+						<a href="#"><img class="animate__animated animate__bounceInRight floating " style="/*position: relative;bottom: -4vh;*/ margin-top: -17vh;"  src="src/images/3.5litros.png" alt=""></a>
 					</div>
 					<div class="col-2 text-center"></div>
 				</div>
@@ -402,7 +403,7 @@
 		});
 
 		/* ------------------------------------ */	
-		/*  ESCENAS
+		/*  ESCENAS ESPACIOS CAMBIO DE MARCHA
 		/* ------------------------------------ */	
 
 		var controller = new ScrollMagic.Controller();
@@ -461,77 +462,56 @@
 	/* ------------------------------------ */	
 	var controller = new ScrollMagic.Controller();
 	 
-	var tl = new TimelineMax();
-	tl.to('.box', 0.5, {
-		xPercent: '+=50',
-	  	rotation:25,
+	var tl = new TimelineMax({ smoothChildTiming:true});
+	tl.to('.box', 0.1, { //botella inclinada desde el inicio
+		xPercent: '+=50%', yPercent: '+=20', rotation:25,
 
-	}).to('.box', 0.5, { // movimiento escena 1 
-		xPercent: '+=0',
-		yPercent: '-=150',
-		rotation:0,
-		scaleX: 0.5,
-		scaleY: 0.5,
-		// offset: 1000,
-		// speed: 1000,
-		// duration: 2000,
-	// })
-
-	// .to('.box', 2.5, {
-	// 	xPercent: '+=0',
-	// 	yPercent: '-=150',
-	// 	rotation:0,
-	// 	scaleX: 0.5,
-	// 	scaleY: 0.5,
-
-	// }).to('.box', 1, {
-	// 	xPercent: '-=60',
-	// }).to('.box', 1, {
-	// 	yPercent: '-=50',
-	// }).to('.box', 1, {
-	// 	rotation: 90,
-		// backgroundColor: 'blue'
-	});
+	}).to('.box', 1, { // cambio de tamaño a botella y movimiento a 
+		xPercent: '+=0', yPercent: '-=20', rotation:0, scaleX: 0.6, scaleY: 0.6
+	// .to('.box', 2.5, {xPercent: '+=0', yPercent: '-=150', rotation:0, scaleX: 0.5, scaleY: 0.5, backgroundColor: 'blue'})
+	}, 0.5);
  
 	// Botella Escena
-	var scene = new ScrollMagic.Scene({
-		triggerElement: "#stage",
-		triggerHook: 0.2,
-		offset: 000,
-		duration: 800
-	})
-	.setTween(tl)
-	// .addIndicators() //debug
-	.addTo(controller);
+	var scene = new ScrollMagic.Scene({ triggerElement: "#stage", triggerHook: 0.2, offset: -150, duration: 1200})
+	.on('start', function () { $("#hotspots, #portafolio, #video1").addClass("d-none") })
+	// .on('leave', function () {setTimeout( function (){ $("#video1").removeClass("d-none"); },2000);})
+	.setTween(tl).addTo(controller); // .addIndicators() //debug
+	
+	//Reset todos los escenarios ocultos
+	var tlReset  = new TimelineMax({ smoothChildTiming:true}); tlReset.to('#test1',1,{opacity:1})
+	var sceneReset = new ScrollMagic.Scene({ triggerHook: "onEnter", offset: 200, duration: 800})
+	.on('start', function () { $("#video1, #hotspots, #portafolio").addClass("d-none") }).setTween(tlReset).addTo(controller);
+	
 
-
-	/* ------------------------------------  .setClassToggle("#video1", "d-none")  esto pone una clase cuando una escena empieze y la quita cuando termina */ 
+	/* ------------------------------------ */ 
 	/*  Escena 1 (video)
 	/* ------------------------------------ */
-	var tl2 = new TimelineMax();  tl2.to('#alka', 0.5 , { xPercent: '+=0', opacity:1  })/*.to('.box4', 13 , {  opacity:1 })Fade In Video.on('leave', function () { alert("seacabo"); })*/
-	var scene2 = new ScrollMagic.Scene({triggerElement: ".event1b",offset: 200 }).setClassToggle("hotspots", "d-none").setTween(tl2).addTo(controller);/*Video Fade In Play Escena*/
-	var tl2b = new TimelineMax();  tl2b.to('#alka', 0.5 , { opacity:0, yPercent: '-=0'  })/*Fade Out Video*/
-	var scene2b = new ScrollMagic.Scene({triggerElement: ".event2",offset: -200 }).setClassToggle("hotspots", "d-none").setTween(tl2b).addTo(controller);/*video Fade Out Play Escena*/
+	var tl2 = new TimelineMax({ smoothChildTiming:true});  tl2.to('#alka', 0.5 , { Percent: '+=0', opacity:1  })/*Fade In Video*/
+	var scene2 = new ScrollMagic.Scene({triggerHook: "onEnter",offset: 200, duration: 500 }).setClassToggle(".menu-icon__line", "bg-white")
+		.on('start', function () { $("#hotspots, #portafolio").addClass("d-none"); $("#video1").removeClass("d-none"); })
+		.setTween(tl2).addTo(controller);/*Video Fade In Play Escena*/
+	var tl2b = new TimelineMax({ smoothChildTiming:true});  tl2b.to('#alka', 0.5 , { opacity:0, yPercent: '-=0'  })/*Fade Out Video*/
+	var scene2b = new ScrollMagic.Scene({triggerElement: ".event2",offset: -300, duration: 700 }).setTween(tl2b).addTo(controller);/*video Fade Out Play Escena*/
 
 
 	/* ------------------------------------ */
-	/*  Escena 2 Hotspots y Botella Centro
+	/*  Escena 2 Hotspots y Botella Centro.setClassToggle("#portafolio", "d-none").setClassToggle("#hotspots", "d-none")
 	/* ------------------------------------ */
-	var tl3 = new TimelineMax();  tl3.to('.box', 0.2 , {  xPercent: '-=50', yPercent: '-=500px' }).to('.box4', 0.2 , { opacity:1  })/*Fade In Hotspot*/
-	var scene3 = new ScrollMagic.Scene({triggerElement: ".event2" }).setClassToggle("#video1", "d-none").setTween(tl3).addTo(controller);/*Escena 2 Play Escena*/
-	var tl3b = new TimelineMax();  tl3b.to('.box4', 0.2 , { opacity:0  })/*Fade Out Hotspot*/
-	var scene3b = new ScrollMagic.Scene({triggerElement: ".event3",offset: -200 }).setTween(tl3b).addTo(controller);/*Hotspots out play Escena*/
+	var tl3 = new TimelineMax({ smoothChildTiming:true});  tl3.to('.box', 0.5 , {  xPercent: '-=50', yPercent: '+=0' }).to('.box4', 0.2 , { opacity:1  })/*Fade In Hotspot*/
+	var scene3 = new ScrollMagic.Scene({triggerElement: ".event2", duration: 600, offset: -200 }).setClassToggle("#video1 ", "d-none").on('start', function () { $("#hotspots").removeClass("d-none"); }).setTween(tl3).addTo(controller);/*Escena 2 Play Escena*/
+	var tl3b = new TimelineMax({ smoothChildTiming:true});  tl3b.to('.box4', 0.2 , { opacity:0  })/*Fade Out Hotspot*/
+	var scene3b = new ScrollMagic.Scene({triggerElement: ".event3",offset: -200, duration: 400 }).setTween(tl3b).addTo(controller);/*Hotspots out play Escena*/
 
 	/* ------------------------------------ */
 	/*  Escena 3 Portafolio
 	/* ------------------------------------ */
-	var tl4 = new TimelineMax();  tl4.to('.portafolio-item', 0.2 , {  opacity:1 })/*.to('.box4', 1 , { opacity:1  }) Fade In Botellas */
-	var scene4 = new ScrollMagic.Scene({triggerElement: ".event3",offset: 250  }).setClassToggle("hotspots", "d-none").setTween(tl4).addTo(controller);/*fade portafolio Play Escena*/
-	var tl4b = new TimelineMax();  tl4b.to('.bottle', 0.2 , { opacity:0 }).to('.botella-3litros', 1 , { opacity:0 })/*Fade Out persistiendo botella 1*/
-	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerElement: ".event4",offset: -300  }).setClassToggle("hotspots", "d-none").setTween(tl4b).addTo(controller);/*Persistiendo botella 1 play Escena*/
-	var tl4b = new TimelineMax();  tl4b.to('.bottle', 0.2 , { opacity:0 }).to('.botella-3litros', 1 , { opacity:0  })/*Fade Out persistiendo botella 1*/
+	var tl4 = new TimelineMax({ smoothChildTiming:true});  tl4.to('.portafolio-item', 0.2 , {  opacity:1 })/*.to('.box4', 1 , { opacity:1  }) Fade In Botellas */
+	var scene4 = new ScrollMagic.Scene({triggerElement: ".event3",offset: 250  }).setClassToggle("#hotspots, #video1", "d-none").on('start', function () { $("#portafolio").removeClass("d-none"); }).setTween(tl4).addTo(controller);/*fade portafolio Play Escena*/
+	var tl4b = new TimelineMax({ smoothChildTiming:true});  tl4b.to('.bottle', 0.2 , { opacity:0 }).to('.botella-3litros', 1 , { opacity:0 })/*Fade Out persistiendo botella 1*/
 	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerElement: ".event4",offset: -300  }).setTween(tl4b).addTo(controller);/*Persistiendo botella 1 play Escena*/
-	var tl4c = new TimelineMax();  tl4c.to('.botella-personal', 0.4 , { xPercent: '-=50',scaleX: 1.5, scaleY: 1.5, }).to('.personal-spec', 1 , { opacity:1  })/*Fade Out persistiendo botella 1*/
+	var tl4b = new TimelineMax({ smoothChildTiming:true});  tl4b.to('.bottle', 0.2 , { opacity:0 }).to('.botella-3litros', 1 , { opacity:0  })/*Fade Out persistiendo botella 1*/
+	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerElement: ".event4",offset: -300  }).setTween(tl4b).addTo(controller);/*Persistiendo botella 1 play Escena*/
+	var tl4c = new TimelineMax({ smoothChildTiming:true});  tl4c.to('.botella-personal', 0.4 , { xPercent: '-=50',scaleX: 1.5, scaleY: 1.5, }).to('.personal-spec', 1 , { opacity:1  })/*Fade Out persistiendo botella 1*/
 	var scene4c = new ScrollMagic.Scene({triggerElement: ".event4",offset: 200  }).setTween(tl4c).addTo(controller);/*Persistiendo botella 1 play Escena*/
 	$(document).ready(function () {
 		/* ------------------------------------ */
