@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>CIELO ALKALINA</title>
+	<title>CIELO ALCALINA</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="src/style.css"> <!-- menu -->
@@ -51,6 +51,28 @@
 	    bottom: -50%;
 	    left: 20%;
 	    z-index: 152;
+	}
+		.box2a {
+		width: 56vw;
+		height: 97vh;
+	    position: fixed;
+	    display: flex;
+	    justify-content: center;
+	    bottom: -14%;
+	    left: -34%;
+	    z-index: 140;
+	    opacity: 0;
+	}
+		.box2b {
+		width: 56vw;
+		height: 97vh;
+	    position: fixed;
+	    display: flex;
+	    justify-content: center;
+	    bottom: -14%;
+	    left: 70%;
+	    z-index: 140;
+	    opacity: 0;
 	}
 	.box3 {
 	    width: 60%;
@@ -142,10 +164,22 @@
 	.nav__list-item a {
 	    color: rgb(255 255 255 / 80%);
 	}
-
-
+	#feat-img{
+    position: relative;
+    left: 13%;
+    width: 22vw;		
+	}
+	#precio{
+    top: 83%;
+    left: 15.5%;		
+	}
+	#ph-neutro{
+	    top: 0%;
+	    position: relative;
+	    width: 6vw;
+	}
 	/*borrar*/
-	.event1b .image {
+/*	.event1b .image {
     	background: #ffff001f;
 	}
 	.event2 {
@@ -156,7 +190,7 @@
 	}
 	.event4{
 		background-color: #900b3429;
-	}
+	}*/
 
 	</style>
 </head>
@@ -183,6 +217,7 @@
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test1b">Características</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test2">Cielo Alcalina</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test3">¿Qué es el PH?</a></li>
+		        <li class="nav__list-item"><a class="hover-target p-3" href="#test4">¿Sabías qué?</a></li>
 <!-- 		        <li class="nav__list-item"><a class="btn-bubble p-3" href="#">Cielo Alcalina</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-two">Seguridad y Salud</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-three">Compromiso</a></li> -->
@@ -195,10 +230,18 @@
 	<div class='cursor3' id="cursor3"></div>
 
 	<div id="stage">
+		<!-- objeto botella principal -->
     	<div class="box box6"><img class="animate__animated animate__fadeInUp animate__delay-3s bottle" src="src/images/akalina2.png" alt=""></div>
+    	<!-- objeto mandala -->
     	<div class="box2"><img class="animate__animated animate__fadeIn animate__fast patron" src="src/images/ptr2.png" alt=""></div>
+    	<!-- objeto logo -->
     	<div class="box3"><img class="animate__animated animate__fadeIn animate__fast patron" src="src/images/logo-alkalina.png" alt=""></div>
+    	<!-- objeto fondo -->
     	<div class="image2 animate__animated animate__fadeOut animate__delay-3s animate__slower"></div>
+    	<!-- objeto mandala bg 1 -->
+    	<div class="box2a"><img class=" patron" src="src/images/ptr2.png" alt=""></div>
+    	<!-- objeto mandala bg 2 -->
+    	<div class="box2b"><img class=" patron" src="src/images/ptr2.png" alt=""></div>
 		
 		<div class="container box4">        
 		    <div class="container" id="hotspots">
@@ -259,12 +302,33 @@
 				<div class="col-2"></div>
 				<div class="col-8" id="alka2" >
 					<h2 class="text-white py-2">¿Qué es el PH?</h2>
-					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/I7Wqyn2VPMY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<div class="col-2"></div>
 			</div>    		
     	</div>
     	<!-- FIN OBJETO VIDEO 2-->
+
+    	<!-- OBJETO CARACTERÍSTICAS -->
+    	<div class="container-fluid position-fixed h100" id="caracteristicas" style="z-index: 147; opacity: 0;">
+			<div class="row mt-3 position-relative h100" style="z-index: 160; height: 100%; align-items: center;">
+				<div class="col-2"></div>
+				<div class="col-3 h100" id="precio" >
+					<h2>$ 1.00</h2>
+					<p>3.05 litros</p>
+				</div>
+				<div class="col-5">
+					<img src="src/images/feat-alca.png" class="animate__animated animate__fadeIn" id="feat-img" alt="">
+				</div>
+				<div class="col-2 h100">
+					 <h3 class="mt-5 pt-4">Volver a</h3> 
+					 <a href="index.html">
+					<img src="src/images/logo-ph.png" class="animate__animated animate__fadeIn" id="ph-neutro" alt="">
+					</a>
+				</div>
+			</div>    		
+    	</div>
+    	<!-- FIN OBJETO CARACTERÍSTICAS-->
     </div>
 
     <!-- The video -->
@@ -334,7 +398,21 @@
 			</div> -->
 		</div>
 	</div>
+	<div id="test4" class="event event4">
+		<div class="pinWrapper">
+		  <div class="image" ></div>
 
+
+		</div>
+	</div>
+
+	<div id="test5" class="event event5">
+		<div class="pinWrapper">
+		  <div class="image"  ></div>
+
+
+		</div>
+	</div>
 </section>
 
 
@@ -375,7 +453,7 @@
 	/*  ESCENAS
 	/* ------------------------------------ */	
 
-	var controller = new ScrollMagic.Controller();
+	var controller = new ScrollMagic.Controller({addIndicators: false});
 
 	new ScrollMagic.Scene({
 		triggerElement: ".event.event2",
@@ -417,6 +495,13 @@
 		pushFollowers: false
 	}).addTo(controller);
 
+	new ScrollMagic.Scene({
+		triggerElement: ".event.event5",
+		triggerHook: "onEnter",
+		duration: "200%"
+	}).setPin(".events-page .event.event5 .pinWrapper",{
+		pushFollowers: false
+	}).addTo(controller);
 
 	/* ------------------------------------ */	
 	/*  Botella Principal
@@ -449,85 +534,111 @@
 	/* ------------------------------------ */
 	/*  Escena Logo
 	/* ------------------------------------ */
-	var tl2 = new TimelineMax(); 
+	var tl2 = new TimelineMax({smoothChildTiming:true}); 
 	tl2.to('.box3', 3/*duración*/ , { xPercent: '+=-70', yPercent: '-=150', scale: 0.5  });/*movimiento Logo*/
 	var scene2 = new ScrollMagic.Scene({ /*vacio para inicio automático*/ }).setTween(tl2).addTo(controller);/*Logo Play Escena*/
+
 
 	/* ------------------------------------ */
 	/*  Escena Mandala
 	/* ------------------------------------ */
-	var tl3 = new TimelineMax(); 
+	var tl3 = new TimelineMax({smoothChildTiming:true}); 
 	tl3.to('.box2', 3/*duración*/ , { xPercent: '+=30', yPercent: '-=90', rotation:120  })/*movimiento Mandala*/
 	.to('.box2', 2/*duración*/ , { opacity:0  }).to('.box2', 0.1/*duración*/ , { 	yPercent: '-=150'  });
 	var scene3 = new ScrollMagic.Scene({ /*vacio para inicio automático*/ })
 	.on('start', function () { setTimeout(function(){  $(".image2").addClass("d-none"); $("#video1, #video2").addClass("d-none");}, 3000); })
 	.setTween(tl3).addTo(controller); /*Mandala Play Escena*/
+	// mandala bg1.addIndicators({name: "mandala bg1"})
+	var tl3b = new TimelineMax({smoothChildTiming:true});  tl3b.to('.box2a', 1/*duración*/ , { opacity: 0.7 })
+	var scene3b = new ScrollMagic.Scene({ triggerElement: ".event4", triggerHook: "onEnter", duration: 500, offset: -100 })
+	.setTween(tl3b).addTo(controller);
+	// mandala bg2.addIndicators({name: "mandala bg2"})
+	var tl3c = new TimelineMax({smoothChildTiming:true});  tl3c.to('.box2b', 1/*duración*/ , { opacity: 0.7 })
+	var scene3c = new ScrollMagic.Scene({ triggerElement: ".event4", triggerHook: "onEnter", duration: 500, offset: -100 })
+	.setTween(tl3c).addTo(controller);
+
 
 	/* ------------------------------------ */
-	/*  Escena Botella. 					.to('#video1', 1 , { opacity:0  })
+	/*  Escena Botella. 	.addIndicators({name: "botella derecha"})			
 	/* ------------------------------------ */
-	var tl5 = new TimelineMax();  tl5.to('.box', 1 , {  xPercent: '+=50', yPercent: '-=500px' })/*Fade In botella*/
+	/*Escena Play botella*/
+	var tl5 = new TimelineMax({smoothChildTiming:true});  tl5.to('.box', 1 , {  xPercent: '+=50', yPercent: '-=500px' })/*Fade In botella*/
 	var scene5 = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", duration: 300, offset: -20 })
 	// .on('end', function () {  $("#video1").addClass("d-none"); })
-	.setTween(tl5).addIndicators({name: "botella derecha"}).addTo(controller);/*Escena Play botella*/
+	.setTween(tl5).addTo(controller);
 
-	// var tl5b = new TimelineMax();  tl5b.to('.video1', 0.5 , { opacity:0  })
-	// var scene5b = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration: 400 })
-	
-	// .on('leave', function () { setTimeout(function(){ $("#video1").addClass("d-none");}, 500); })
-	// .setTween(tl5b).addTo(controller);
+	// botella sabias .addIndicators({name: "botella sabias"})
+	var tl5b = new TimelineMax();  tl5b.to('.box', 1 , { xPercent: '-=90'  })
+	var scene5b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration: 500, offset: -120 })
+	.setTween(tl5b).addTo(controller);
 
 	/* ------------------------------------ */
-	/*  Escena Hotspots   .on('start', function () {  $("#video1").addClass("d-none"); })
+	/*  Escena Hotspots  .addIndicators({name: "hotspots in", colorStart: "#FFFFFF"})
 	/* ------------------------------------ */
-	var tl4 = new TimelineMax();  tl4.to('.box4', 1 , { opacity:1  }) /*.to('.box4', 13 , {  opacity:1 })Fade In Hotspot*/
-	var scene4 = new ScrollMagic.Scene({triggerElement: ".event1b", duration: 300, triggerHook:"onEnter", offset: 10 })
-	.on('start', function () {  $("#video2, #video1").addClass("d-none"); })
-	.setTween(tl4).addIndicators({name: "hotspots in", colorStart: "#FFFFFF"}).addTo(controller);/*hotspots Play Escena*/
+	var tl4 = new TimelineMax({smoothChildTiming:true});  tl4.to('.box4', 1 , { opacity:1  }) /*.to('.box4', 13 , {  opacity:1 })Fade In Hotspot*/
+	var scene4 = new ScrollMagic.Scene({triggerElement: ".event1b", duration: 300, triggerHook:"onEnter", offset: -100 })
+	.on('start', function () {  $("#video2, #video1").addClass("d-none"); $(".menu-icon__line").removeClass("bg-white"); })
+	.on('end', function () {  $(".menu-icon__line").addClass("bg-white"); })
+	.setTween(tl4).addTo(controller);/*hotspots Play Escena*/
 
-	/*Fade Out Hotspot*/
-	var tl4b = new TimelineMax();  tl4b.to('.box4', 0.5 , { opacity:0  })
-	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", duration: 300, offset: -350 })
-	// .setClassToggle(" #video2", "d-none")
-	.on('end', function () {  $("#video1").addClass("d-none"); })
-	// .on('start', function () { setTimeout(function(){  $("#video2").addClass("d-none");}, 100); })
-	.setTween(tl4b).addIndicators({name: "hotspots out", colorStart: "#FFFFFF"}).addTo(controller);/*hotspots Play Escena*/
+	/*Fade Out Hotspot.addIndicators({name: "hotspots out", colorStart: "#FFFFFF"})*/
+	var tl4b = new TimelineMax({smoothChildTiming:true});  tl4b.to('.box4', 0.5 , { opacity:0  })
+	var scene4b = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", duration: 150, offset: -90 })
+	.on('end', function () {  $("#video1").addClass("d-none");  $("#hotspots").removeClass("d-none"); })
+	.setTween(tl4b).addTo(controller);/*hotspots Play Escena*/
 
 
 	/* ------------------------------------ */
 	/*  Escena Video 1
 	/* ------------------------------------ */
 	
-	/*Fade In video*/
-	var tl5 = new TimelineMax();  tl5.to('#video1', 1 , { opacity:1 })	
-	var scene5 = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", duration:400, offset: 40 })
+	/*Fade In video.addIndicators({name: "video in", colorStart: "#FFFFFF"})*/
+	var tl5 = new TimelineMax({smoothChildTiming:true});  tl5.to('#video1', 1 , { opacity:1 })	
+	var scene5 = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", duration:200, offset: 100 })
 	.on('start', function () {   $("#video1").removeClass("d-none"); $("#video2").addClass("d-none");  })
-	.setTween(tl5).addIndicators({name: "video in", colorStart: "#FFFFFF"}).addTo(controller);
+	.setTween(tl5).addTo(controller);
 	
-	/*Fade Out video*/
-	var tl5b = new TimelineMax();  tl5b.to('#video1', 0.5 , { opacity:0  })
-	var scene5b = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:300, offset: -400  })
+	/*Fade Out video.addIndicators({name: "video out", colorStart: "#FFFFFF"})*/
+	var tl5b = new TimelineMax({smoothChildTiming:true});  tl5b.to('#video1', 0.5 , { opacity:0  })
+	var scene5b = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:200, offset: -100  })
 	.on('end', function () {  $("#video1, #video2").addClass("d-none");$("#video1").removeClass("d-none"); })
-	.setTween(tl5b).addIndicators({name: "video out", colorStart: "#FFFFFF"}).addTo(controller);
+	.setTween(tl5b).addTo(controller);
 
 
 	/* ------------------------------------ */
 	/*  Escena Video 2
 	/* ------------------------------------ */
 	
-	/*Fade In video*/
-	var tl5 = new TimelineMax();  tl5.to('#video2', 1 , { opacity:1 })	
-	var scene5 = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:400 })
+	/*Fade In video.addIndicators({name: "video 2 in", colorStart: "#FFFFFF"})*/
+	var tl5 = new TimelineMax({smoothChildTiming:true});  tl5.to('#video2', 1 , { opacity:1 })	
+	var scene5 = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:200, offset: 120 })
 	.on('start', function () {  $("#video2").removeClass("d-none"); })
-	.setTween(tl5).addIndicators({name: "video 2 in", colorStart: "#FFFFFF"}).addTo(controller);
+	.setTween(tl5).addTo(controller);
+	
+	/*Fade Out video.addIndicators({name: "video 2 out", colorStart: "#FFFFFF"})*/
+	var tl5b = new TimelineMax({smoothChildTiming:true});  tl5b.to('#video2', 0.5 , { opacity:0  })
+	var scene5b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration:200, offset: -150  })
+	// .on('start', function () {  $("#caracteristicas").addClass("d-none"); })
+	.on('end', function () {  $("#video1, #video2").addClass("d-none");$("#video2").removeClass("d-none"); })
+	.setTween(tl5b).addTo(controller);
+
+
+	/* ------------------------------------ */
+	/*  Escena Características
+	/* ------------------------------------ */
+	
+	/*Fade In video.addIndicators({name: "caracteristicas in", colorStart: "#FFFFFF"})*/
+	var tl6 = new TimelineMax({smoothChildTiming:true});  tl6.to('#caracteristicas', 1 , { opacity:1 })	
+	var scene6 = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration:400, offset: -120 })
+	.on('start', function () {  $("#caracteristicas").removeClass("d-none"); })
+	 .on('end', function () {  $("#video1, #video2, #hotspots").addClass("d-none"); })
+	.setTween(tl6).addTo(controller);
 	
 	/*Fade Out video*/
 	// var tl5b = new TimelineMax();  tl5b.to('#video2', 0.5 , { opacity:0  })
-	// var scene5b = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:400  })
-	// .on('start', function () { setTimeout(function(){ $("#video2").addClass("d-none"); }, 10); })
-	// .setTween(tl5b).addIndicators().addTo(controller);
-
-
+	// var scene5b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration:200, offset: -50  })
+	// .on('end', function () {  $("#video1, #video2").addClass("d-none");$("#video2").removeClass("d-none"); })
+	// .setTween(tl5b).addIndicators({name: "video 2 out", colorStart: "#FFFFFF"}).addTo(controller);
 
 	/* ------------------------------------ */
 	/*  Reset escenas
