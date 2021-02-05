@@ -86,7 +86,7 @@
 
 
 	/*borrar*/
-/*	.event1b .image {
+	.event1b .image {
     	background: #ffff001f;
 	}
 	.event2 {
@@ -97,7 +97,7 @@
 	}
 	.event4{
 		background-color: #900b3429;
-	}*/
+	}
 	</style>
 </head>
 
@@ -126,8 +126,8 @@
 		        <li class="nav__list-item"><a class="hover-target p-3 m-0" href="#test2">Características</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3 m-0" href="#test3">Portafolio</a></li>
 		        <li class="nav__list-item"><a class="btn-bubble p-3 m-0" href="alkalina.html">Cielo Alcalina</a></li>
-		        <li class="nav__list-item"><a class="hover-target p-3 m-0" href="#test4">Seguridad y Salud</a></li>
-		        <li class="nav__list-item"><a class="hover-target p-3 m-0" href="#section-three">Compromiso</a></li>
+		        <!-- <li class="nav__list-item"><a class="hover-target p-3 m-0" href="#test4">Seguridad y Salud</a></li> -->
+		        <li class="nav__list-item"><a class="hover-target p-3 m-0" href="#test4">Compromiso</a></li>
 			<!--<li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li>  -->
 			</ul>
 			<!-- REDES SOCIALES -->
@@ -200,7 +200,7 @@
 				        <img src="src/images/ag-purib.png" alt="">
 			      	</div>
 			    </div>
-			    <div style="top: 13.5%; left: 51%;" class="lg-hotspot lg-hotspot--top-right">
+			    <div style="top: 19.5vh; left: 51%;" class="lg-hotspot lg-hotspot--top-right">
 			      	<div class="lg-hotspot__button"></div>
 			      	<div class="lg-hotspot__label hotspots2">
 			        	<img src="src/images/libr-sodiob.png" alt="">
@@ -520,7 +520,7 @@
 		//Reset todos los escenarios ocultos
 		var tlReset  = new TimelineMax({ smoothChildTiming:true}); tlReset.to('#test1',1,{opacity:1})
 		var sceneReset = new ScrollMagic.Scene({ triggerHook: "onEnter", offset: 200, duration: 800})
-		.on('start', function () { $("#video1, #hotspots, #portafolio, #compromiso").addClass("d-none") }).setTween(tlReset).addTo(controller);
+		.on('start', function () { $("#video1, #hotspots, #portafolio, #compromiso").addClass("d-none"); $(".menu-icon__line").removeClass("bg-white");  }).setTween(tlReset).addTo(controller);
 	
 
 		/* ------------------------------------ */ 
@@ -528,10 +528,13 @@
 		/* ------------------------------------ */
 		var tl2 = new TimelineMax({ smoothChildTiming:true});  tl2.to('#video1', 1 , { Percent: '+=0', opacity:1  }) /*Fade In Video*/
 		var scene2 = new ScrollMagic.Scene({triggerElement: ".event1b", triggerHook: "onEnter",offset: 200, duration: 800 })
-			.on('start', function () { $("#hotspots, #portafolio, #compromiso").addClass("d-none"); $("#video1, #alka").removeClass("d-none"); })
+			.on('start', function () { 
+				$("#hotspots, #portafolio, #compromiso").addClass("d-none"); 
+				$("#video1, #alka").removeClass("d-none");
+				$(".menu-icon__line").addClass("bg-white"); })
 			.setTween(tl2).addTo(controller);/*Video Fade In Play Escena*/
 		var tl2b = new TimelineMax({ smoothChildTiming:true});  tl2b.to('#video1', 1 , { opacity:0, yPercent: '-=0'})/*Fade Out Video*/
-		var scene2b = new ScrollMagic.Scene({triggerElement: ".event2",offset: -450, duration: 500 })
+		var scene2b = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", offset: 10, duration: 600 })
 		.on('start', function () { $("#hotspots, #portafolio").addClass("d-none");}).setTween(tl2b).addTo(controller);/*video Fade Out Play Escena*/
 
 
@@ -539,14 +542,20 @@
 		/*  Escena 2 Hotspots y Botella Centro     .on('end', function () { $("#video1").addClass("d-none");})
 		/* ------------------------------------ */
 		var tl3 = new TimelineMax({smoothChildTiming:true}); tl3.to('.box',1 ,{xPercent:'-=50'});
-		var scene3 = new ScrollMagic.Scene({triggerElement: ".event2",triggerHook: "onEnter", duration: 500, offset: 100 })
+		var scene3 = new ScrollMagic.Scene({triggerElement: ".event2",triggerHook: "onEnter", duration: 400, offset: 200 })
 		.on('start', function (){$("#hotspots").removeClass("d-none"); $("#portafolio, #compromiso").addClass("d-none"); }).setTween(tl3).addTo(controller);
 		
 		var tl3b = new TimelineMax({smoothChildTiming:true}); tl3b.to('#hotspots',1 ,{opacity:1})
-		var scene3b = new ScrollMagic.Scene({triggerElement: ".event2", duration: 400, offset: -100 }).setTween(tl3b).addTo(controller);
+		var scene3b = new ScrollMagic.Scene({triggerElement: ".event2",triggerHook: "onEnter", duration: 400, offset: 250 })
+		.setClassToggle("#portafolio", "d-none")
+		.setTween(tl3b).addTo(controller);
 
 		var tl3c = new TimelineMax({smoothChildTiming:true}); tl3c.to('#hotspots, #compromiso',1 ,{opacity:0})
-		var scene3c = new ScrollMagic.Scene({triggerElement: ".event3",triggerHook: "onEnter", duration: 300, offset: 100 }).on('end', function () { $("#compromiso").addClass("d-none");}).setTween(tl3c).addTo(controller);
+		var scene3c = new ScrollMagic.Scene({triggerElement: ".event3",triggerHook: "onEnter", duration: 300, offset: -50 }).on('end', function () { $("#compromiso").addClass("d-none");}).setTween(tl3c).addTo(controller);
+
+		// var tl3d = new TimelineMax({smoothChildTiming:true}); tl3d.to('#test3',1 ,{opacity:1})
+		// var scene3d = new ScrollMagic.Scene({triggerElement: ".test2", triggerHook: "onLeave", offset: 10, duration: 200})
+		// .on('start', function () { $("#portafolio").addClass("d-none");}).setTween(tl3d).addTo(controller);	
 
 		// var tl3 = new TimelineMax({smoothChildTiming:true}); tl3.to('.box',2 ,{xPercent:'-=50'}).to('.box4',1 ,{opacity:1})
 		// var scene3 = new ScrollMagic.Scene({triggerElement: ".event2", duration: 600, offset: -200 })
@@ -559,8 +568,8 @@
 		/*  Escena 3 Portafolio
 		/* ------------------------------------ */
 		var tl4 = new TimelineMax({ smoothChildTiming:true});  tl4.to('.portafolio-item', 0.5 , {  opacity:1 }).to('#hotspots', 0.5 , { opacity:0  }) /*Fade In Botellas */
-		var scene4 = new ScrollMagic.Scene({triggerElement: ".event3",triggerHook: "onEnter",offset: 200, duration: 500  }).setClassToggle(" #video1", "d-none")
-		.on('start', function () { $("#portafolio").removeClass("d-none");$("#compromiso").addClass("d-none"); }).setTween(tl4).addTo(controller);/*fade portafolio Play Escena*/
+		var scene4 = new ScrollMagic.Scene({triggerElement: ".event3",triggerHook: "onEnter",offset: 300, duration: 400  }).setClassToggle(" #video1", "d-none")
+		.on('start', function () { $("#compromiso").addClass("d-none"); }).setTween(tl4).addTo(controller);/*fade portafolio Play Escena*/
 		// var tl4b = new TimelineMax({ smoothChildTiming:true});  tl4b.to('.portafolio-item', 0.5 , { opacity:0 }) /*Fade Out persistiendo botella 1*/
 		// var scene4b = new ScrollMagic.Scene({triggerHook: "onLeave",offset: -300 }).setTween(tl4b).addTo(controller); /*Persistiendo botella 1 play Escena */
 
