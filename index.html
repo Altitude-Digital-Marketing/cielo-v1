@@ -94,7 +94,7 @@
 	.h1shadown{text-shadow: #0513753d 1px 1px 4px;}
 	.pshadown{}
 	/*borrar*/
-	.event1b .image {
+/*	.event1b .image {
     	background: #ffff001f;
 	}
 	.event2 {
@@ -105,7 +105,7 @@
 	}
 	.event4{
 		background-color: #900b3429;
-	}
+	}*/
 	</style>
 </head>
 
@@ -301,14 +301,7 @@
 	  	<!-- ESPACIO EVENTO 1 - VIDEO -->
 	  	<div id="test1b" class="event event1b">
 	    	<div class="pinWrapper">
-<!-- 				<div class="row mt-5 position-relative" style="z-index: 150; height: 100%; align-items: center;">
-					<div class="col-2"></div>
-					<div class="col-8" id="alka" style="opacity: 0;">
-						<h2>Introducción</h2>
-						<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/1ZYbU82GVz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</div>
-					<div class="col-2"></div>
-				</div> -->
+
 				<div class="image"></div>
 	    	</div>
 	  	</div>
@@ -316,35 +309,7 @@
 
 	  	<!-- ESPACIO EVENTO 2 -->
 	  	<div id="test2" class="event event2">
-	    	<!-- hotspots -->
-<!-- 	    	<div class="container box4">  
-			    <img class="lg-image invisible w-25" src="src/images/3.5litros.png" />
-			    <div style="top: 30%; left: 46%;" class="lg-hotspot lg-hotspot--top-right">
-			        <div class="lg-hotspot__button"></div>
-		      		<div class="lg-hotspot__label hotspots2">
-		        		<img style="width: 70%;" src="src/images/neutrob.png" alt="">
-		       		</div>
-			    </div>
-			    <div style="top: 48%; left: 46%;" class="lg-hotspot lg-hotspot--top-right">
-			        <div class="lg-hotspot__button"></div>
-		      		<div class="lg-hotspot__label hotspots2">
-		        		<img src="src/images/es-cl.png" alt="">
-		       		</div>
-			    </div>
-			    <div style="top: 43%; right: 40%;" class="lg-hotspot lg-hotspot--top-left">
-			      	<div class="lg-hotspot__button"></div>
-			      	<div class="lg-hotspot__label hotspots2">
-				        <img src="src/images/ag-purib.png" alt="">
-			      	</div>
-			    </div>
-			    <div style="top: 13.5%; left: 51%;" class="lg-hotspot lg-hotspot--top-right">
-			      	<div class="lg-hotspot__button"></div>
-			      	<div class="lg-hotspot__label hotspots2">
-			        	<img src="src/images/libr-sodiob.png" alt="">
-			      	</div>
-			    </div>
-			</div> -->
-			<!-- FIN hotspots -->
+
 	  	</div>
 	  	<!-- FIN ESPACIO EVENTO 2 -->
 
@@ -352,19 +317,7 @@
 	  	<div id="test3" class="event event3">
 		    <div class="pinWrapper ">
 		      	<div class="image"></div>
-		      	<!-- botellas portafolio -->
-				<!-- <div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
-					<div class="col-2 text-center"></div>
-					<div class="col-3 text-right portafolio-item botella-personal">
-						<a href="#b-personal"><img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt=""></a>
-					</div>
-					<div class="col-2 text-center"></div>
-					<div class="col-3 text-left portafolio-item botella-3litros">
-						<a href="#"><img class="animate__animated animate__bounceInRight floating " style="position: relative;bottom: 0%;"  src="src/images/3.5litros.png" alt=""></a>
-					</div>
-					<div class="col-2 text-center"></div>
-				</div> -->
-				<!-- Fin botellas portafolio -->
+
 		    </div>
 	  	</div>
 	  	<!-- FIN ESPACIO EVENTO 3 -->
@@ -373,23 +326,7 @@
 		<div id="test4" class="event event4">
 		    <div class="pinWrapper ">
 		    	<div class="image"></div>
-				<!-- <div class="row mt-5 pt-5 position-relative" style="z-index: 150; top: -90%;">
-					<div class="col-2 text-center"></div>
-					<div class="col-3 text-right portafolio-item botella-personal">
-						<img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt="">
-					</div>
-					<div class="col-3 text-left personal-spec"> <br> <br> <br><br><br>
-						<h2 class=" heading text-white pt-5"><strong>CIELO PERSONAL</strong></h2> <br> <br>
-						<h3 class="text-white"> <strong>Precio:</strong> $ 0.30 </h3>
-						<h3 class="text-white"> <strong>Cantidad:</strong> 625 ml </h3>
-						<h3 class="text-white"> <strong>Unidades por Empaque:</strong> 12 unidades </h3>
-						<br><br><br>
-						<a href="#test3" class="text-white">Volver</a>
-					</div>
-					<div class="col-2 text-center"></div>
-					<div class="col-2 text-center"></div>
-				</div> -->
-				<!-- <div class="container position-relative" style="z-index: 150; top: -90%;"> a</div> -->
+
 		    </div>
 		</div>
 		<!-- FIN ESPACIO EVENTO 4 -->
@@ -510,7 +447,7 @@
 		// Botella Escena
 		var scene = new ScrollMagic.Scene({ triggerElement: "#stage", triggerHook: 0.2, offset: -150, duration: 1200})
 		.on('start', function () { $("#hotspots, #portafolio, #video1, #descripcion, #compromiso").addClass("d-none") })
-		.setTween(tl).addIndicators({name: "botella escena", colorStart: "#FFFFFF"}).addTo(controller); // .addIndicators() //debug
+		.setTween(tl).removeIndicators({name: "botella escena", colorStart: "#FFFFFF"}).addTo(controller); // .removeIndicators() //debug
 		
 
 		/* ------------------------------------ */ 
@@ -523,13 +460,13 @@
 			$("#hotspots, #portafolio, #compromiso").addClass("d-none"); 
 			$("#video1, #alka").removeClass("d-none");
 			$(".menu-icon__line").addClass("bg-white"); })
-		.setTween(tl2).addIndicators({name: "Fade in video", colorStart: "#FFFFFF",colorTrigger: "#FFFFFF"}).addTo(controller);
+		.setTween(tl2).removeIndicators({name: "Fade in video", colorStart: "#FFFFFF",colorTrigger: "#FFFFFF"}).addTo(controller);
 
 		/*Fade Out Video*/
 		var tl2b = new TimelineMax({ smoothChildTiming:true});  tl2b.to('#video1', 1 , { opacity:0, yPercent: '-=0'})
 		var scene2b = new ScrollMagic.Scene({triggerElement: ".event2", triggerHook: "onEnter", offset: -100, duration: 250 })
 		.on('start', function () { $("#hotspots, #portafolio").addClass("d-none");})
-		.setTween(tl2b).addIndicators({name: "video fade out", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl2b).removeIndicators({name: "video fade out", colorStart: "#FFFFFF"}).addTo(controller);
 
 
 		/* ------------------------------------ */
@@ -539,20 +476,20 @@
 		var tl3 = new TimelineMax({smoothChildTiming:true}); tl3.to('.box',1 ,{xPercent:'-=50'});
 		var scene3 = new ScrollMagic.Scene({triggerElement: ".event2",triggerHook: "onEnter", duration: 300, offset: 100 })
 		.on('start', function (){$("#hotspots").removeClass("d-none"); $("#portafolio, #compromiso").addClass("d-none"); })
-		.setTween(tl3).addIndicators({name: "hotspots botella centro", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl3).removeIndicators({name: "hotspots botella centro", colorStart: "#FFFFFF"}).addTo(controller);
 		
 		//Hotspots aparece
 		var tl3b = new TimelineMax({smoothChildTiming:true}); tl3b.to('#hotspots',1 ,{opacity:1})
 		var scene3b = new ScrollMagic.Scene({triggerElement: ".event2",triggerHook: "onEnter", duration: 300, offset: 50 })
 		// .setClassToggle("#portafolio", "d-none")
-		.setTween(tl3b).addIndicators({name: "hotspots aparece", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl3b).removeIndicators({name: "hotspots aparece", colorStart: "#FFFFFF"}).addTo(controller);
 
 		//Hotspots desaparece
 		var tl3c = new TimelineMax({smoothChildTiming:true}); tl3c.to('#hotspots, #compromiso',1 ,{opacity:0})
 		var scene3c = new ScrollMagic.Scene({triggerElement: ".event3",triggerHook: "onEnter", duration: 200, offset: -20 })
 		.on('start', function () { $("#portafolio").addClass("d-none");})
 		.on('end', function () { $("#compromiso").addClass("d-none");})
-		.setTween(tl3c).addIndicators({name: "hotspots desaparece", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl3c).removeIndicators({name: "hotspots desaparece", colorStart: "#FFFFFF"}).addTo(controller);
 
 
 		/* ------------------------------------ */
@@ -563,13 +500,13 @@
 		var scene4 = new ScrollMagic.Scene({triggerElement: ".event3",triggerHook: "onEnter",offset: 100, duration: 250  })
 		.setClassToggle(" #video1", "d-none")
 		.on('start', function () {  $("#portafolio").removeClass("d-none"); })
-		.setTween(tl4).addIndicators({name: "fade in botellas", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl4).removeIndicators({name: "fade in botellas", colorStart: "#FFFFFF"}).addTo(controller);
 
 		/*Fix portafolio Play Escena*/
 		var tl4b = new TimelineMax({ smoothChildTiming:true});  tl4b.to('.event4',0.5,{ })
 		var scene4b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter",offset: -330, duration: 300 })
 		.on('end', function () { $("#compromiso").addClass("d-none");})
-		.setTween(tl4b).addIndicators({name: "fix portafolio", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl4b).removeIndicators({name: "fix portafolio", colorStart: "#FFFFFF"}).addTo(controller);
 
 		/* ------------------------------------ */
 		/*  Escena 4 Compromiso
@@ -577,18 +514,18 @@
 		/*Movidendo botellas a la derecha */
 		var tl5 = new TimelineMax({ smoothChildTiming:true}); tl5.to('#portafolio2', 1 , {  scaleX:0.6, scaleY:0.6, xPercent:'25', yPercent:'-5' }) 
 		var scene5 = new ScrollMagic.Scene({triggerElement: ".event4",triggerHook: "onEnter",offset: 10, duration: 500  })
-		.setTween(tl5).addIndicators({name: "botellas a la derecha", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl5).removeIndicators({name: "botellas a la derecha", colorStart: "#FFFFFF"}).addTo(controller);
 
 		/*Movidendo botella cebtral a la derecha */
 		var tl5b = new TimelineMax({ smoothChildTiming:true}); tl5b.to(".box", 1, {scaleX:0.3, scaleY:0.3, xPercent:'42', yPercent:'-1'})
 		var scene5b = new ScrollMagic.Scene({triggerElement: ".event4",triggerHook: "onEnter",offset: 10, duration: 500  })
-		.setTween(tl5b).addIndicators({name: "botella medio a derecha", colorStart: "#FFFFFF"}).addTo(controller);
+		.setTween(tl5b).removeIndicators({name: "botella medio a derecha", colorStart: "#FFFFFF"}).addTo(controller);
 
 		/* Compromiso texto */
 		var tl5c = new TimelineMax({ smoothChildTiming:true}); tl5c.to("#compromiso", 1 , {  opacity:1  })
 		var scene5c = new ScrollMagic.Scene({triggerElement: ".event4",triggerHook: "onEnter",offset: 0, duration: 600  })
 		.on('start', function () { $("#compromiso").removeClass("d-none"); })
-		.setTween(tl5c).addIndicators({name: "Compromiso", colorStart: "#FFFFFF"}).addTo(controller);	
+		.setTween(tl5c).removeIndicators({name: "Compromiso", colorStart: "#FFFFFF"}).addTo(controller);	
 
 
 		$(document).ready(function () {
