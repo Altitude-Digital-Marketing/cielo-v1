@@ -178,6 +178,58 @@
 	    position: relative;
 	    width: 6vw;
 	}
+	#ph-neutro:hover {
+  		animation: pulse 1s infinite;
+  		transition: .3s;
+	}
+
+	@keyframes pulse {
+	  0% {
+	    transform: scale(1);
+	  }
+	  70% {
+	    transform: scale(.9);
+	  }
+	    100% {
+	    transform: scale(1);
+	  }
+	}
+	.unlitro{
+	width: 103px;
+    position: relative;
+    display: block;
+    top: -5px;		
+	}
+	.personal{
+		display: block;
+	    position: relative;
+		left: -35%;
+    	top: -25px;
+	}
+	.nav__content {    top: 55%;}
+	#cart{
+width: 22%;
+    position: absolute;
+    top: 85vh;
+    left: 45%;
+	}
+	#cart:hover {
+	  	animation: pulse 1s infinite;
+	  	transition: .3s;
+	}
+	@keyframes pulse {
+	  0% {
+	    transform: scale(1);
+	  }
+	  70% {
+	    transform: scale(.9);
+	  }
+	    100% {
+	    transform: scale(1);
+	  }
+	}
+
+
 	/*borrar*/
 /*	.event1b .image {
     	background: #ffff001f;
@@ -218,6 +270,7 @@
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test2">Cielo Alcalina</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test3">¿Qué es el PH?</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#test4">¿Sabías qué?</a></li>
+		        <li class="nav__list-item"><a class="hover-target p-3" href="#test5">Portafolio</a></li>
 <!-- 		        <li class="nav__list-item"><a class="btn-bubble p-3" href="#">Cielo Alcalina</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-two">Seguridad y Salud</a></li>
 		        <li class="nav__list-item"><a class="hover-target p-3" href="#section-three">Compromiso</a></li> -->
@@ -313,7 +366,7 @@
     	<div class="container-fluid position-fixed h100" id="caracteristicas" style="z-index: 147; opacity: 0;">
 			<div class="row mt-3 position-relative h100" style="z-index: 160; height: 100%; align-items: center;">
 				<div class="col-2"></div>
-				<div class="col-3 h100" id="precio" >
+				<div class="col-3 text-white h100" id="precio" >
 					<h2>$ 1.00</h2>
 					<p>3.05 litros</p>
 				</div>
@@ -321,14 +374,36 @@
 					<img src="src/images/feat-alca.png" class="animate__animated animate__fadeIn" id="feat-img" alt="">
 				</div>
 				<div class="col-2 h100">
-					 <h3 class="mt-5 pt-4">Volver a</h3> 
+					 <h3 class="mt-5 pt-4 text-white">Volver a</h3> 
 					 <a href="index.html">
 					<img src="src/images/logo-ph.png" class="animate__animated animate__fadeIn" id="ph-neutro" alt="">
+					</a>
+					<a href="https://mailchi.mp/grupoaje/deliveryecuador" target="_blank">
+						<img id="cart" src="src/images/shopping-cart.png" alt="">
 					</a>
 				</div>
 			</div>    		
     	</div>
     	<!-- FIN OBJETO CARACTERÍSTICAS-->
+
+    	<!-- OBJETO PORTAFOLIO -->
+    		<div class="container-fluid position-fixed h100" id="portafolio" style="z-index: 146; opacity: 0;">
+				<div class="row mt-4 pt-5 position-relative h100" id="portafolio2">
+					<div class="col-2 text-center"></div>
+					<div class="col-3 text-right portafolio-item botella-3litros align-self-center">
+						<img class="animate__animated animate__bounceInRight" style="/*position: relative;bottom: -4vh;*/ margin-top: -17vh;"  src="src/images/3.5litros.png" alt="">
+					</div>
+					<div class="col-2 text-center align-self-center">
+						<img class="animate__animated animate__bounceInRight  unlitro" src="src/images/botella.png"  alt="">
+						<h4 class="text-white"> <br><a class="text-white" href="index.html"> VOLVER A CIELO REGULAR</a></h4>
+					</div>
+					<div class="col-3 text-left portafolio-item botella-personal align-self-center">
+						<img class="animate__animated animate__bounceInLeft personal" style="/*position: relative; margin-top: 40%; */"  src="src/images/personal.png" alt="">
+					</div>
+					<div class="col-2 text-center"></div>
+				</div>
+    		</div>
+    	<!-- FIN OBJETO PORTAFOLIO -->
     </div>
 
     <!-- The video -->
@@ -543,8 +618,8 @@
 	/*  Escena Mandala
 	/* ------------------------------------ */
 	var tl3 = new TimelineMax({smoothChildTiming:true}); 
-	tl3.to('.box2', 3/*duración*/ , { xPercent: '+=30', yPercent: '-=90', rotation:120  })/*movimiento Mandala*/
-	.to('.box2', 2/*duración*/ , { opacity:0  }).to('.box2', 0.1/*duración*/ , { 	yPercent: '-=150'  });
+	tl3.to('.box2', 2/*duración*/ , { xPercent: '+=30', yPercent: '-=90', rotation:120  })/*movimiento Mandala*/
+	.to('.box2', 1/*duración*/ , { opacity:0  }).to('.box2', 0.1/*duración*/ , { 	yPercent: '-=150'  });
 	var scene3 = new ScrollMagic.Scene({ /*vacio para inicio automático*/ })
 	.on('start', function () { setTimeout(function(){  $(".image2").addClass("d-none"); $("#video1, #video2").addClass("d-none");}, 3000); })
 	.setTween(tl3).addTo(controller); /*Mandala Play Escena*/
@@ -571,6 +646,12 @@
 	var tl5b = new TimelineMax();  tl5b.to('.box', 1 , { xPercent: '-=90'  })
 	var scene5b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration: 500, offset: -120 })
 	.setTween(tl5b).addTo(controller);
+	// botella portafolio
+	var tl5c = new TimelineMax();  tl5c.to('.box', 1 , { xPercent: '+=66', scalex: 0.30, scaleY: 0.45  })
+	var scene5c = new ScrollMagic.Scene({triggerElement: ".event5", triggerHook: "onEnter", duration: 500, offset: -120 })
+	.setTween(tl5c).addTo(controller);
+
+
 
 	/* ------------------------------------ */
 	/*  Escena Hotspots  .addIndicators({name: "hotspots in", colorStart: "#FFFFFF"})
@@ -612,7 +693,7 @@
 	/*Fade In video.addIndicators({name: "video 2 in", colorStart: "#FFFFFF"})*/
 	var tl5 = new TimelineMax({smoothChildTiming:true});  tl5.to('#video2', 1 , { opacity:1 })	
 	var scene5 = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:200, offset: 120 })
-	.on('start', function () {  $("#video2").removeClass("d-none"); })
+	.on('start', function () {  $("#video2").removeClass("d-none");$('#cart').removeClass("animate__animated animate__zoomIn"); })
 	.setTween(tl5).addTo(controller);
 	
 	/*Fade Out video.addIndicators({name: "video 2 out", colorStart: "#FFFFFF"})*/
@@ -627,18 +708,29 @@
 	/*  Escena Características
 	/* ------------------------------------ */
 	
-	/*Fade In video.addIndicators({name: "caracteristicas in", colorStart: "#FFFFFF"})*/
+	/*Fade In Caracteristicas.addIndicators({name: "caracteristicas in", colorStart: "#FFFFFF"})*/
 	var tl6 = new TimelineMax({smoothChildTiming:true});  tl6.to('#caracteristicas', 1 , { opacity:1 })	
 	var scene6 = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration:400, offset: -120 })
-	.on('start', function () {  $("#caracteristicas").removeClass("d-none"); })
+	.on('start', function () {  $("#caracteristicas").removeClass("d-none"); $('#cart').addClass("animate__animated animate__zoomIn"); })
 	 .on('end', function () {  $("#video1, #video2, #hotspots").addClass("d-none"); })
 	.setTween(tl6).addTo(controller);
 	
-	/*Fade Out video*/
-	// var tl5b = new TimelineMax();  tl5b.to('#video2', 0.5 , { opacity:0  })
-	// var scene5b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration:200, offset: -50  })
-	// .on('end', function () {  $("#video1, #video2").addClass("d-none");$("#video2").removeClass("d-none"); })
-	// .setTween(tl5b).addIndicators({name: "video 2 out", colorStart: "#FFFFFF"}).addTo(controller);
+	/*Fade Out Caracteristicas.addIndicators({name: "video 2 out", colorStart: "#FFFFFF"})*/
+	var tl6b = new TimelineMax();  tl6b.to('#caracteristicas', 0.5 , { opacity:0  })
+	var scene6b = new ScrollMagic.Scene({triggerElement: ".event5", triggerHook: "onEnter", duration:200, offset: -50  })
+	.on('end', function () {  $("#video1, #video2, #características").addClass("d-none");$("#caracteristicas").removeClass("d-none"); })
+	.setTween(tl6b).addTo(controller);
+
+	/* ------------------------------------ */
+	/*  Escena PORTAFOLIO
+	/* ------------------------------------ */
+	
+	/*Fade In video.addIndicators({name: "caracteristicas in", colorStart: "#FFFFFF"})*/
+	var tl7 = new TimelineMax({smoothChildTiming:true});  tl7.to('#portafolio', 1 , { opacity:1 })	
+	var scene7 = new ScrollMagic.Scene({triggerElement: ".event5", triggerHook: "onEnter", duration:400, offset: -120 })
+	.on('start', function () {  })
+	 .on('end', function () {  $("#video1, #video2, #hotspots").addClass("d-none");  $("#caracteristicas").addClass("d-none");})
+	.setTween(tl7).addTo(controller);
 
 	/* ------------------------------------ */
 	/*  Reset escenas
