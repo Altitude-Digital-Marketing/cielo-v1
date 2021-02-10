@@ -13,26 +13,21 @@
 	<style type="text/css">
 	.h100{ height: 100%; }
 	.head1{ top: 28vh;  left: 2%; }
-	.portafolio-item, .personal-spec{
-		opacity: 0;
-	}
+	.portafolio-item{ opacity: 0; }
 
-	.box {
-	    /*height: 42vh;*/
+	.box { 
 	    height: 100%;
 	    width: 60%;
 	    align-items: center;
 	    margin: 4px;
-	    font-size: 1.2em;
-	    /* position: absolute; */
+	    font-size: 1.2em; 
 	    position: fixed;
 	    font-weight: 700;
 	    color: white;
 	    border-radius: 4px;
 	    display: flex;
 	    justify-content: center;
-	    flex-wrap: wrap;
-	    /* top: 5%; */
+	    flex-wrap: wrap; 
 	    left: 20%;
 	    z-index: 100;
 	}
@@ -46,6 +41,7 @@
 	.box6 {
 	  /*background-color: #b84b4b;*/
 	}
+	.logoimg{ width: 150px; -webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(3px 3px 2px #22222245);}
 	.compromiso{
 		z-index: 150;
 	    height: 100vh;
@@ -56,15 +52,10 @@
 		padding: 2em;
 		width: 190px;
 	}
-	.hotspots2>img{
-		width: 85%;
-	}
+	.hotspots2>img{ width: 85%; }
 	.bottle{
-		/*position: absolute;*/
 	    z-index: 10;
 	    display: flex;
-		/*	    width: 100%; cambiada por la botella con nuevo tamaño
-	    top: 15vh;*/
 	    width: 220px;
     	top: 31vh;
 	}
@@ -76,23 +67,53 @@
 	  min-height: 100%;
 	  z-index: 1;
 	}
-	.event {
-	    z-index: 10;
-	}
+	.event {  z-index: 10; }
 	.event2 {
 	    z-index: 100;
 	    height: 106vh;
 	}
 	.bg-glass{
-	background: rgba( 255, 255, 255, 0.45 );
-	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-	backdrop-filter: blur( 2.0px );
-	-webkit-backdrop-filter: blur( 2.0px );
-	border-radius: 10px;
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: rgb(255 255 255 / 19%);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 	}
-	.h1shadown{text-shadow: #0513753d 1px 1px 4px;}
+	.h1shadown{text-shadow:#000b5575 2px 3px 5px}
 	.pshadown{}
+
+@media only screen and (max-width: 600px) {
+  .head1{ display: none; }
+	body.nav-active .nav:before, body.nav-active .nav:after {
+	    -webkit-transform: translateX(0%) translateY(0%);
+	    transform: translateX(0%) translateY(0%);
+	    border-radius: 0;
+	}
+	.nav:before, .nav:after {  width: 100vw; }
+	.nav__content {
+	    top: 60%;
+	    -webkit-transform: translate(0%, -60%);
+	    transform: translate(0%, -60%);
+	    width: 100%;
+	}
+	.logo-wrap { left: -30px; top: 22px; }
+	.box{display: none;}
+	/*.cd-header{background: rgb(0,79,172); background: linear-gradient(180deg, rgba(0,79,172,1) 0%, rgba(255,255,255,0) 66%);}*/
+	.logoimg{width: 120px;-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(2px 2px 2px #22222295); }
+	#video1, #hotspots, #portafolio{display: none;}
+	.h100 {
+	    height: 100%;
+	    width: 90VW;
+	    margin: auto;
+	}
+	.h1shadown {
+    	font-size: 0.7em;
+	}
+	.h2{
+		font-size: 1.6rem;
+	}
+
 	/*borrar*/
 /*	.event1b .image {
     	background: #ffff001f;
@@ -114,7 +135,7 @@
 	<header id="eventos" class="cd-header">
 		<div class="header-wrapper">
 			<div class="logo-wrap">
-				<a href="#" class="hover-target"><img style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(3px 3px 2px #22222245);" src="src/images/blanco.png" width="150px" alt=""></a>
+				<a href="#" class="hover-target"><img class="logoimg" style="" src="src/images/blanco.png"  alt=""></a>
 			</div>
 			<div class="nav-but-wrap">
 				<div class="menu-icon hover-target">
@@ -169,7 +190,7 @@
 	<div id="stage">
 
 		<!-- OBJETO BOTELLA MEDIO-->
-    	<div class="box box6">
+    	<div class="box box6 animate__animated" data-target="#cielo-litro">
     		<img class="animate__animated animate__bounceInDown floating bottle" src="src/images/botella.png" alt="agua-cielo">
     	</div>
     	<!-- FIN  OBJETO BOTELLA -->
@@ -192,25 +213,25 @@
 			    <img class="lg-image invisible w-25" src="src/images/3.5litros.png" />
 			    <div style="top: 30%; left: 46%;" class="lg-hotspot lg-hotspot--top-right">
 			        <div class="lg-hotspot__button"></div>
-		      		<div class="lg-hotspot__label hotspots2">
+		      		<div class="lg-hotspot__label hotspots2 bg-glass">
 		        		<img style="width: 70%;" src="src/images/neutrob.png" alt="">
 		       		</div>
 			    </div>
 			    <div style="top: 48%; left: 46%;" class="lg-hotspot lg-hotspot--top-right">
 			        <div class="lg-hotspot__button"></div>
-		      		<div class="lg-hotspot__label hotspots2">
+		      		<div class="lg-hotspot__label hotspots2 bg-glass">
 		        		<img src="src/images/es-cl.png" alt="">
 		       		</div>
 			    </div>
 			    <div style="top: 43%; right: 40%;" class="lg-hotspot lg-hotspot--top-left">
 			      	<div class="lg-hotspot__button"></div>
-			      	<div class="lg-hotspot__label hotspots2">
+			      	<div class="lg-hotspot__label hotspots2 bg-glass">
 				        <img src="src/images/ag-purib.png" alt="">
 			      	</div>
 			    </div>
 			    <div style="top: 19.5vh; left: 51%;" class="lg-hotspot lg-hotspot--top-right">
 			      	<div class="lg-hotspot__button"></div>
-			      	<div class="lg-hotspot__label hotspots2">
+			      	<div class="lg-hotspot__label hotspots2 bg-glass">
 			        	<img src="src/images/libr-sodiob.png" alt="">
 			      	</div>
 			    </div>
@@ -221,50 +242,136 @@
     		<div class="container-fluid position-fixed h100" id="portafolio" style="z-index: 152;">
 				<div class="row mt-5 pt-5 position-relative h100" id="portafolio2">
 					<div class="col-2 text-center"></div>
+					
+					<!-- botella personal -->
 					<div class="col-3 text-right portafolio-item botella-personal align-self-center">
-						<a href="#b-personal"><img class="animate__animated animate__bounceInLeft floating " style="/*position: relative; margin-top: 40%; */"  src="src/images/personal.png" alt=""></a>
+						<a class="botella" data-toggle="modal" data-target="#cielo-personal" href="#event3">
+							<img class="animate__animated animate__bounceInLeft floating " style=""  src="src/images/personal.png" alt="">
+						</a>
 					</div>
-					<div class="col-2 text-center"></div>
+
+					<div class="col-2 text-center"><a class="botella d-block h-100" data-toggle="modal" data-target="#cielo-litro" href="#event3"></a></div>
+					
+					<!-- botella 3 litros -->
 					<div class="col-3 text-left portafolio-item botella-3litros align-self-center">
-						<a href="#"><img class="animate__animated animate__bounceInRight floating " style="/*position: relative;bottom: -4vh;*/ margin-top: -17vh;"  src="src/images/3.5litros.png" alt=""></a>
+						<a class="botella" data-toggle="modal" data-target="#cielo-3litros" href="#event3">
+							<img class="animate__animated animate__bounceInRight floating" style="margin-top: -17vh;" src="src/images/3.5litros.png" alt="">
+						</a>
 					</div>
+
 					<div class="col-2 text-center"></div>
 				</div>
     		</div>
     	<!-- FIN OBJETO PORTAFOLIO -->
 
-    	<!-- OBJETO DESCRIPCIÓN -->
-    		<div class="container-fluid position-fixed h100" id="descripcion" style="z-index: 153;">
-    			<div class="row mt-5 pt-5 position-relative" style="">
+
+
+    	<!-- MODAL -->
+		<div class="modal " data-backdrop="static" data-keyboard="false" id="cielo-personal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		    <div class="modal-content bg-glass animate__animated animate__fadeIn animate__slower">
+		      <div class="modal-header border-0">
+		        <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          	<span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+    			<div class="row position-relative" style="">
 					<div class="col-2 text-center"></div>
-					<div class="col-3 text-right portafolio-item botella-personal">
-						<img class="animate__animated animate__bounceInLeft floating " style="position: relative; margin-top: 42%;"  src="src/images/personal.png" alt="">
+					<div class="col-12 col-md-3 text-center portafolio-item botella-personal">
+						<img class="animate__animated animate__fadeIn animate__delay-1s" src="src/images/personal.png" alt="">
 					</div>
-					<div class="col-3 text-left personal-spec"> <br> <br> <br><br><br>
-						<h2 class=" heading text-white pt-5"><strong>CIELO PERSONAL</strong></h2> <br> <br>
-						<h3 class="text-white"> <strong>Precio:</strong> $ 0.30 </h3>
-						<h3 class="text-white"> <strong>Cantidad:</strong> 625 ml </h3>
-						<h3 class="text-white"> <strong>Unidades por Empaque:</strong> 12 unidades </h3>
-						<br><br><br>
-						<a href="#test3" class="text-white">Volver</a>
+					<div class=" col-12 col-md-7 text-left personal-spec h1shadown"> 
+						<h2 class=" heading text-white"><strong>CIELO PERSONAL</strong></h2> <br> <br>
+						<h3 class="text-white"> <strong>Precio:</strong>$ 0.30</h3>
+						<h3 class="text-white"> <strong>Cantidad:</strong>625 ml</h3>
+						<h3 class="text-white"> <strong>Unidades por Empaque:</strong><br>12 unidades</h3>
+						<br><br><br><br>
 					</div>
-					<div class="col-2 text-center"></div>
-					<div class="col-2 text-center"></div>
+					
 				</div>
-			</div>
-		<!-- OBJETO DESCRIPCIÓN -->
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+		<div class="modal " data-backdrop="static" data-keyboard="false" id="cielo-litro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		    <div class="modal-content bg-glass animate__animated animate__fadeIn animate__slower">
+		      <div class="modal-header border-0">
+		        <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+    			<div class="row position-relative" style="">
+					<div class="col-2 text-center"></div>
+					<div class="col-3 text-center portafolio-item botella-personal">
+						<img class="animate__animated animate__fadeIn animate__delay-1s" src="src/images/botella.png" style="width: 90px;" alt="">
+					</div>
+					<div class="col-7 text-left personal-spec h1shadown">
+						<h2 class=" heading text-white"><strong>CIELO Litro</strong></h2> <br> <br>
+						<h3 class="text-white"> <strong>Precio:</strong>$ 0.60</h3>
+						<h3 class="text-white"> <strong>Cantidad:</strong>1200 ml</h3>
+						<h3 class="text-white"> <strong>Unidades por Empaque:</strong><br>12 unidades</h3>
+						<br><br><br><br>
+					</div>
+					
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+		<div class="modal " data-backdrop="static" data-keyboard="false" id="cielo-3litros" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		    <div class="modal-content bg-glass animate__animated animate__fadeIn animate__slower">
+		      <div class="modal-header border-0">
+		        <!-- <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5> -->
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+    			<div class="row position-relative" style="">
+					<div class="col-2 text-center"></div>
+					<div class="col-3 text-center portafolio-item botella-personal">
+						<img class="animate__animated animate__fadeIn animate__delay-1s" style="margin-top: -6vh; width: 110px;" src="src/images/3.5litros.png" alt="">
+					</div>
+					<div class="col-7 text-left personal-spec h1shadown"> 
+						<h2 class=" heading text-white"><strong>CIELO 3.5 Litros</strong></h2> <br> <br>
+						<h3 class="text-white"> <strong>Precio:</strong>$ 1.00</h3>
+						<h3 class="text-white"> <strong>Cantidad:</strong>3.5 Litros</h3>
+						<h3 class="text-white"> <strong>Unidades por Empaque:</strong><br>6 unidades</h3>
+						<br><br><br><br>
+					</div>
+					
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+   		<!-- FIN MODAL -->
+
+
 
 		<!-- OBJETO COMPROMISO -->
 			<div class="container-fluid position-fixed h100 d-none" id="compromiso" style="z-index: 153;">
 				<div class="row position-relative h100" style="">
-					<div class="col-2 text-center"></div>
-					<div class="col-5 p-5 text-left align-self-center bg-glass text-white h1shadown rounded" style="max-width: 670px;">
+					<div class="col-12 col-md-2 text-center"></div>
+					<div class="col-12 col-md-5 p-5 text-left align-self-center bg-glass text-white h1shadown rounded" style="max-width: 670px;">
 						<h3 class="h2 pl-2 border-left border-info">COMPROMISO</h3> 
 						<p>Procurar que tu cuerpo se encuentre en armonía con paz interior y saludable siendo conscientes 
 						del mundo qué nos rodea.</p>
 						<p>Sentirse bién por dentro y por fuera es simple.</p>
 					</div>
-					<div class="col-5 text-center"></div>
+					<div class="col-md-5 text-center"></div>
 				</div>
 			</div>
 		<!-- FIN OBJETO COMPROMISO -->
@@ -284,10 +391,20 @@
 		<div id="test1" class="event event1">
 		    <div class="pinWrapper">
 		      	<div class="image"></div>
+
+		      	<!-- BOTELLA MOVIL -->
+				<div class="row col-12 d-md-none" style="top:21%;">
+					<div class="col-12 text-center ml-3">
+						<img class="w-75 m-auto" src="src/images/heading1.png" alt="Eleva tu vida mobile">
+						<img class="w-50 m-auto" src="src/images/botella.png" alt="agua-cielo" alt="">
+					</div>
+				</div>
+				<!-- FIN BOTELLA MOVIL -->
+
 				<div class="container">
 					<div class="row w-100">
 					 	<div class="col-5 head1">
-					 		<img class="animate__animated animate__fadeIn animate__slower" src="src/images/heading1.png" alt="">
+					 		<img class="animate__animated animate__fadeIn animate__slower" src="src/images/heading1.png" alt="Eleva tu vida">
 					 	</div>
 					 	<div class="col-7">
 					 		<!-- <img class="animate__animated animate__bounceInDown" src="src/images/botella.png" alt=""> -->
@@ -303,28 +420,61 @@
 	    	<div class="pinWrapper">
 
 				<div class="image"></div>
+
+				<div class="row mt-3 animate__animated animate__fadeIn animate__delay-2s	">
+					<div class="col-12" style="margin-top: 50%;">
+						<h2 class="text-white text-center py-2">Introducción</h2>
+						<div class="embed-responsive embed-responsive-16by9">
+						  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KCLNS5afAuA?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div> 
 	    	</div>
 	  	</div>
 	  	<!-- FIN ESPACIO EVENTO 1 - VIDEO -->
 
 	  	<!-- ESPACIO EVENTO 2 -->
 	  	<div id="test2" class="event event2">
+	  		<div class="row d-md-none bg-glass h100">
+	  			
+	  			<div class="col-6 align-self-center">
+	  				<div class="bg-glass w-75">
+	  					<img src="src/images/1.png" class="w-100" alt="">	
+	  				</div>
+	  				<div class="bg-glass w-75 mt-3">
+	  					<img src="src/images/3.png" class="w-100" alt="">	
+	  				</div>
+	  			</div>
 
+	  			<div class="col-6 align-self-center">
+	  				<div class="bg-glass w-75">
+	  					<img src="src/images/2.png" class="w-100" alt="">	
+	  				</div>
+	  				<div class="bg-glass w-75 mt-3">
+	  					<img src="src/images/4.png" class="w-100" alt="">	
+	  				</div>
+	  			</div>
+
+  				<div class="col-12 text-center ml-3 align-self-center" style="position: absolute;">
+					<img class="w-25 m-auto" src="src/images/botella.png" alt="agua-cielo" alt="">
+				</div>
+
+	  		</div>
 	  	</div>
 	  	<!-- FIN ESPACIO EVENTO 2 -->
 
 	  	<!-- ESPACIO EVENTO 3 -->
 	  	<div id="test3" class="event event3">
-		    <div class="pinWrapper ">
+		    <div class="pinWrapper">
 		      	<div class="image"></div>
-
+			  	
 		    </div>
 	  	</div>
 	  	<!-- FIN ESPACIO EVENTO 3 -->
 
 	  	<!-- ESPACIO EVENTO 4 -->
 		<div id="test4" class="event event4">
-		    <div class="pinWrapper ">
+		    <div class="pinWrapper">
 		    	<div class="image"></div>
 
 		    </div>
@@ -354,6 +504,11 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
 	<!-- debug -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+
+
+	<!-- bootstrapjs -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
 	<!-- Get minor updates and patch fixes within a major version -->
@@ -542,6 +697,23 @@
 			}
 			(() => {  const buttons = document.querySelectorAll(".lg-hotspot__button");
 			  buttons.forEach(button => { button.addEventListener("click", selectHotspot); }); })();
+
+			/* ------------------------------------ */
+			/* 	modal Eventos
+			/* ------------------------------------ */
+
+			$(".botella").on("click", function(){
+				botella = $(this).data("target");
+				$('*[data-target="'+botella+'"]').addClass("animate__animated animate__zoomOut")
+				// $(botella).
+				// alert(botella);
+			});
+			$(".close").on("click", function(){
+				element = $(this).parents(".modal")[0].id;
+				$('*[data-target="#'+element+'"]').removeClass('animate__zoomOut').addClass("animate__zoomIn animate__slow")
+				// $(botella).
+				// alert(element);
+			});
 		});
 
 	</script>
