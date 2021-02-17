@@ -138,6 +138,12 @@
 		width: 100%;
 		z-index: 140;
 	}
+	.lg-hotspot__label { width: 17em; max-width: 53vw; }
+	.hpts1{ top: 36%; left: 39vw; }
+	.hpts2{ top: 56%; left: 39vw; }
+	.hpts3{ top: 42%; left: 46vw; }
+	.hpts4{ top: 20.5%; left: 43vw; }
+
 	.hotspots-img{
 		    width: 75px;
 	    height: 75px;
@@ -154,13 +160,8 @@
 	    left: 24px;
 	    display: flex;
 	}
-	.hstyle{
-		/*background: #001e51;*/
-	    color: #fefefe;
-	}
-	.nav:after {
-	    background: #001e51;
-	}
+	.hstyle{  color: #fefefe; }
+	.nav:after { background: #001e51; }
 	.nav__list-item a {
 	    color: rgb(255 255 255 / 80%);
 	}
@@ -194,6 +195,17 @@
 	    transform: scale(1);
 	  }
 	}
+	.bg-glass{
+    background: rgb(255 255 255 / 19%);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+	}
+	.imgwhite{
+		filter: brightness(0) invert(1);
+	}
 	.unlitro{
 	width: 103px;
     position: relative;
@@ -208,10 +220,10 @@
 	}
 	.nav__content {    top: 55%;}
 	#cart{
-width: 22%;
-    position: absolute;
-    top: 85vh;
-    left: 45%;
+		width: 22%;
+		position: absolute;
+		top: 85vh;
+		left: 45%;
 	}
 	#cart:hover {
 	  	animation: pulse 1s infinite;
@@ -229,12 +241,67 @@ width: 22%;
 	  }
 	}
 
+	/*ARREGLOS RESPONSIVE*/
+	@media only screen and (max-width: 600px) {
+
+	.event2 {
+		background: rgb(255 255 255 / 10%);
+		backdrop-filter: blur( 16px );
+		-webkit-backdrop-filter: blur( 8px );
+		border-radius: 10px 10px 0px 0px;
+		border-top: 1px solid rgba( 255, 255, 255, 0.18 ); }
+	.event3 {        
+		background: rgb(255 255 255 / 10%);
+		backdrop-filter: blur( 16px );
+		-webkit-backdrop-filter: blur( 8px );
+		border-radius: 0px 0px 10px 10px;
+		border-bottom: 1px solid rgba( 255, 255, 255, 0.18 ); }
+	
+
+	.box3 {    top: 21%; left: 33%;}
+	.box3 img{ width: 100%; }
+	.event1 .image {
+		background-size: cover;
+		background-position: 29% -10vh;
+	}
+	body.nav-active .nav:before, body.nav-active .nav:after {
+	    -webkit-transform: translateX(0%) translateY(0%);
+	    transform: translateX(0%) translateY(0%);
+	    border-radius: 0;
+	}
+	.nav:before, .nav:after {  width: 100vw; }
+	.nav__content {
+	    top: 53%;
+	    -webkit-transform: translate(0%, -60%);
+	    transform: translate(0%, -60%);
+	    width: 100%;
+	}
+	.box{ width: 125%; top: 13%; left: -51%; }
+	.hpts1 { top: 42%; left: 55vw; }
+	.hpts2 { top: 62%; left: 53vw; }
+	.hpts3 { top: 52%; left: 29vw; }
+	.hpts4 { top: 28.5%; left: 37vw; }
+  	#caracteristicas, .box2a, .box2b { display: none; }
+
+	/* .logo-wrap { left: -30px; top: 22px; } */
+
+	/*.cd-header{background: rgb(0,79,172); background: linear-gradient(180deg, rgba(0,79,172,1) 0%, rgba(255,255,255,0) 66%);}*/
+	/* .logoimg{width: 120px;-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(2px 2px 2px #22222295); } */
+	/* #video1, #hotspots, #portafolio{display: none;} */
+	/* .image2, .box2{display: none;} */
+	/* .h100 {
+	    height: 100%;
+	    width: 90VW;
+	    margin: auto;
+	} */
+	/* .h1shadown { font-size: 0.7em; }
+	.h2{ font-size: 1.6rem; } */
 
 	/*borrar*/
 /*	.event1b .image {
     	background: #ffff001f;
-	}
-	.event2 {
+	} *//*
+	 .event2 {
 	    background-color: #900b3429;
 	}
 	.event3 {
@@ -298,53 +365,57 @@ width: 22%;
 		
 		<div class="container box4">        
 		    <div class="container" id="hotspots">
-			    <div style="top: 36%; left: 39vw;" class="lg-hotspot lg-hotspot--top-right">
+
+			    <div class="lg-hotspot lg-hotspot--top-right hpts1">
 			      <div class="lg-hotspot__button"></div>
-			      <div class="lg-hotspot__label d-flex">
-			      	<img class="hotspots-img p-3" src="src/images/drop.png" alt="">
-				        <p> Agua purificada envasada sin gas. </p>
+			      <div class="lg-hotspot__label d-flex bg-glass py-0">
+			      	<img class="hotspots-img p-3 m-auto imgwhite" src="src/images/drop.png" alt="">
+				        <p class="text-white py-0 m-auto pl-0 pr-2"> Agua purificada envasada sin gas. </p>
 			        <!-- <h4></h4> -->
 			      </div>
 			    </div>
 
-			    <div style="top: 56%; left: 39vw;" class="lg-hotspot lg-hotspot--top-right">
+			    <div class="lg-hotspot lg-hotspot--top-right hpts2">
 			      <div class="lg-hotspot__button"></div>
-			      <div class="lg-hotspot__label d-flex">
-			      	<img class="hotspots-img p-3" src="src/images/nowater.png" alt="">
-				        <p> <br> Libre de sodio. </p>
+			      <div class="lg-hotspot__label d-flex p-0 bg-glass">
+			      	<img class="hotspots-img p-3 m-auto imgwhite" src="src/images/nowater.png" alt="">
+				        <p class="text-white w-100 p-0 m-auto"> Libre de sodio. </p>
 			        <!-- <h4></h4> -->
 			      </div>
 			    </div>
 
-			    <div style="top: 42%; left: 46vw;" class="lg-hotspot lg-hotspot--top-left">
+			    <div class="lg-hotspot lg-hotspot--top-left hpts3">
 			      	<div class="lg-hotspot__button"></div>
-			      		<div class="lg-hotspot__label">
+			      		<div class="lg-hotspot__label py-1 bg-glass">
 				        <!-- <h4>Calidad </h4> -->
-				        <img class="hotspots-img p-3" src="src/images/equality.png" alt="">
-				        <p> Envasada con altos estándares de calidad. </p>
+				        <img class="hotspots-img p-3 m-auto imgwhite" src="src/images/equality.png" alt="">
+				        <p class="text-white m-auto pr-1 pl-0 py-0"> Envasada con altos estándares de calidad. </p>
 			      	</div>
 			    </div>
 
-			    <div style="top: 20.5%; left: 43vw;" class="lg-hotspot lg-hotspot--top-left">
+			    <div  class="lg-hotspot lg-hotspot--top-left hpts4">
 			      	<div class="lg-hotspot__button"></div>
-			      		<div class="lg-hotspot__label">
+			      		<div class="lg-hotspot__label bg-glass">
 				        <!-- <h4>Calidad </h4> -->
-				        <img class="hotspots-img2 p-3" src="src/images/asa.png" alt="">
-				        <p> Asa para fácil Manipulación. </p>
+				        <img class="hotspots-img2 p-2 p-md-3" src="src/images/asa.png" alt="">
+				        <p class="text-white px-md-4 px-0"> Asa para fácil Manipulación. </p>
 			      	</div>
 			    </div>
+
 		    </div>
 		</div>
 
     	<!-- OBJETO VIDEO 1 -->
     	<div class="container-fluid position-fixed h100" id="video1" style="z-index: 150;opacity: 0;">
 			<div class="row mt-3 position-relative" style="z-index: 150; height: 100%; align-items: center;">
-				<div class="col-2"></div>
-				<div class="col-8" id="alka" >
+				<div class="col-2 d-none d-md-block"></div>
+				<div class="col-12 col-md-5" id="alka" >
 					<h2 class="text-white py-2">Introducción</h2>
-					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/OfKxQQEa9JQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/OfKxQQEa9JQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
 				</div>
-				<div class="col-2"></div>
+				<div class="col-5 d-none d-md-block"></div>
 			</div>    		
     	</div>
     	<!-- FIN OBJETO VIDEO 1-->
@@ -352,12 +423,14 @@ width: 22%;
     	<!-- OBJETO VIDEO 2 -->
     	<div class="container-fluid position-fixed h100" id="video2" style="z-index: 150;opacity: 0;">
 			<div class="row mt-3 position-relative" style="z-index: 150; height: 100%; align-items: center;">
-				<div class="col-2"></div>
-				<div class="col-8" id="alka2" >
+				<div class="col-2 d-none d-md-block"></div>
+				<div class="col-12 col-md-5" id="alka2" >
 					<h2 class="text-white py-2">¿Qué es el PH?</h2>
-					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/I7Wqyn2VPMY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/I7Wqyn2VPMY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
 				</div>
-				<div class="col-2"></div>
+				<div class="col-5 d-none d-md-block"></div>
 			</div>    		
     	</div>
     	<!-- FIN OBJETO VIDEO 2-->
