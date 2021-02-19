@@ -86,8 +86,8 @@
 	    display: flex;
 	    justify-content: center;
 	    flex-wrap: wrap;
-	    top: 40%;
-	    left: 20%;
+		top: 16.5em;
+    	left: 21.5%;
 	    z-index: 153;
 	}
 	.box4 {
@@ -165,10 +165,11 @@
 	.nav__list-item a {
 	    color: rgb(255 255 255 / 80%);
 	}
-	#feat-img{
+	#feat-img,#feat-img2,#feat-img3,#feat-img4,#feat-img5{
     position: relative;
     left: 13%;
-    width: 22vw;		
+    /*width: 22vw;		*/
+    max-width: 45%;
 	}
 	#precio{
     top: 83%;
@@ -210,7 +211,8 @@
 	width: 103px;
     position: relative;
     display: block;
-    top: -5px;		
+    /*top: -5px;		*/
+    top: 85px;
 	}
 	.personal{
 		display: block;
@@ -444,13 +446,17 @@
 					<p>3.05 litros</p>
 				</div>
 				<div class="col-5">
-					<img src="src/images/feat-alca.png" class="animate__animated animate__fadeIn" id="feat-img" alt="">
+					<div class="container p-5">
+						
+					<img src="src/images/sab2.png" class="featured animate__animated animate__fadeIn" id="feat-img" alt="">
+					<img src="src/images/sab3.png" class="featured animate__animated animate__fadeIn animate__delay-1s" id="feat-img2" alt="">
+					<img src="src/images/sab4.png" class="featured animate__animated animate__fadeIn animate__delay-2s" id="feat-img3" alt="">
+					<img src="src/images/sab5.png" class="featured animate__animated animate__fadeIn animate__delay-3s" id="feat-img4" alt="">
+					<img src="src/images/sab6.png" class="featured animate__animated animate__fadeIn animate__delay-4s" id="feat-img5" alt="">
+					</div>
 				</div>
 				<div class="col-2 h100">
-					 <h3 class="mt-5 pt-4 text-white">Volver a</h3> 
-					 <a href="index.html">
-					<img src="src/images/logo-ph.png" class="animate__animated animate__fadeIn" id="ph-neutro" alt="">
-					</a>
+					 
 					<a href="https://mailchi.mp/grupoaje/deliveryecuador" target="_blank">
 						<img id="cart" src="src/images/shopping-cart.png" alt="">
 					</a>
@@ -468,7 +474,11 @@
 					</div>
 					<div class="col-2 text-center align-self-center">
 						<img class="animate__animated animate__bounceInRight  unlitro" src="src/images/botella.png"  alt="">
-						<h4 class="text-white"> <br><a class="text-white" href="index.html"> VOLVER A CIELO REGULAR</a></h4>
+						<!-- <h4 class="text-white"> <br><a class="text-white" href="index.html"> VOLVER A CIELO REGULAR</a></h4> -->
+						<h3 class="mt-5 pt-5 text-white">Volver a</h3> 
+					 <a href="index.html">
+					<img src="src/images/logo-ph.png" class="animate__animated animate__fadeIn" id="ph-neutro" alt="">
+					</a>
 					</div>
 					<div class="col-3 text-left portafolio-item botella-personal align-self-center">
 						<img class="animate__animated animate__bounceInLeft personal" style="/*position: relative; margin-top: 40%; */"  src="src/images/personal.png" alt="">
@@ -718,6 +728,8 @@
 	// botella sabias .addIndicators({name: "botella sabias"})
 	var tl5b = new TimelineMax();  tl5b.to('.box', 1 , { xPercent: '-=90'  })
 	var scene5b = new ScrollMagic.Scene({triggerElement: ".event4", triggerHook: "onEnter", duration: 500, offset: -120 })
+	.on('start', function () {  $(".featured").removeClass("animated__animated"); })
+	.on('end', function () {  $(".featured").addClass("animated__animated"); })
 	.setTween(tl5b).addTo(controller);
 	// botella portafolio
 	var tl5c = new TimelineMax();  tl5c.to('.box', 1 , { xPercent: '+=66', scalex: 0.30, scaleY: 0.45  })
@@ -767,6 +779,7 @@
 	var tl5 = new TimelineMax({smoothChildTiming:true});  tl5.to('#video2', 1 , { opacity:1 })	
 	var scene5 = new ScrollMagic.Scene({triggerElement: ".event3", triggerHook: "onEnter", duration:200, offset: 120 })
 	.on('start', function () {  $("#video2").removeClass("d-none");$('#cart').removeClass("animate__animated animate__zoomIn"); })
+	// .on('end', function () {  $(".featured").addClass("animated__animated"); })
 	.setTween(tl5).addTo(controller);
 	
 	/*Fade Out video.addIndicators({name: "video 2 out", colorStart: "#FFFFFF"})*/
