@@ -87,6 +87,37 @@
 	.h1shadown{text-shadow:#000b5575 2px 3px 5px}
 	.pshadown{}
 
+
+	ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+			border-bottom: solid 4px #ededed00;
+		}
+
+		ul.tabs li.current{
+			color: #222;
+    		border-bottom: solid 4px #ededed;
+    		margin-bottom: 1.5rem;
+    		text-align: center;
+		}
+
+		.tab-content{
+			display: none;
+			padding: 15px;
+		}
+
+		.tab-content.current{
+			display: block;
+		}	
+
 @media only screen and (max-width: 600px) {
   	.head1{ display: none; }
 	body.nav-active .nav:before, body.nav-active .nav:after {
@@ -117,7 +148,7 @@
 	.h2{
 		font-size: 1.6rem;
 	}
-
+}
 	/*borrar*/
 /*	.event1b .image {
     	background: #ffff001f;
@@ -203,11 +234,13 @@
     	<div class="container-fluid position-fixed h100" id="video1" style="z-index: 150;opacity: 0;">
 			<div class="row mt-3 position-relative" style="z-index: 150; height: 100%; align-items: center;">
 				<div class="col-2"></div>
-				<div class="col-8" id="alka" >
+				<div class="col-5 bg-glass p-4" id="alka" >
 					<h2 class="text-white py-2">Introducción</h2>
-					<iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/KCLNS5afAuA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="video-embed" src="https://www.youtube.com/embed/KCLNS5afAuA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
 				</div>
-				<div class="col-2"></div>
+				<div class="col-5"></div>
 			</div>    		
     	</div>
     	<!-- FIN OBJETO VIDEO 1-->
@@ -318,7 +351,7 @@
 						<img class="animate__animated animate__fadeIn animate__delay-1s" src="src/images/botella.png" style="width: 90px;" alt="">
 					</div>
 					<div class="col-7 text-left personal-spec h1shadown">
-						<h2 class=" heading text-white"><strong>CIELO Litro</strong></h2> <br> <br>
+						<h2 class="heading text-white"><strong>CIELO Litro</strong></h2> <br> <br>
 						<h3 class="text-white"> <strong>Precio:</strong>$ 0.60</h3>
 						<h3 class="text-white"> <strong>Cantidad:</strong>1200 ml</h3>
 						<h3 class="text-white"> <strong>Unidades por Empaque:</strong><br>12 unidades</h3>
@@ -450,7 +483,7 @@
 					  
 	  				<div class="bg-glass d-flex ml-3 px-1 pr-4 w-100 mt-4 glassglass">
 						<img style="height: fit-content;" src="src/images/equality.png" class="w-25 my-auto mx-2 px-1 imgwhite" alt="">
-						<p style="font-size: 0.9em" class="my-auto text-white mx-2 align-self-center">ENVASADA CON ALTOS ESTÁNDARES DE CALIDAD</p>	
+						<p style="font-size: 0.9em" class="my-auto text-white mx-3 align-self-center">ENVASADA CON ALTOS ESTÁNDARES DE CALIDAD</p>	
 	  				</div>
 
 	  				<div class="bg-glass d-flex ml-3 px-2 pr-5 w-100 mt-4 align-self-center glassglass">
@@ -480,10 +513,37 @@
 
 	  	<!-- ESPACIO EVENTO 3 -->
 	  	<div id="test3" class="event event3">
-		    <div class="pinWrapper">
-		      	<div class="image"></div>
-			  	
-		    </div>
+			<div class="row h100 align-self-center d-md-none">
+				<div class="container my-4 ">
+					<ul class="tabs d-flex">
+						<li class="tab-link d-flex align-items-end mb-4 current" data-tab="tab-1"><img class="mb-0" width="90px" src="src/images/3.5litros.png" alt=""></li>
+						<li class="tab-link d-flex align-items-end mb-4" data-tab="tab-2"><img class="mb-0" width="70px" src="src/images/botella.png" alt=""></li>
+						<li class="tab-link d-flex align-items-end mb-4" data-tab="tab-3"><img class="mb-0" width="50px" src="src/images/personal.png" alt=""></li>
+					</ul>
+				
+					<div id="tab-1" class="tab-content bg-glass current">
+						<h2 class="text-center border-bottom text-white pb-2">Cielo 3.5L</h2>
+						<p>Precio: $ 1,00</p>
+						<p>Cantidad: 3.5 Litros</p>
+						<p>Unidades por empaque: 6 Unidades</p>
+					</div>
+					<div id="tab-2" class="tab-content bg-glass ">
+						<h2 class="text-center border-bottom text-white pb-2">Cielo 1 Litro</h2>
+						<p>Precio: $ 0,60</p>
+						<p>Cantidad: 1200 ml</p>
+						<p>Unidades por empaque: 12 Unidades</p>
+					</div>
+					<div id="tab-3" class="tab-content bg-glass ">
+						<h2 class="text-center border-bottom text-white pb-2">Cielo Personal</h2>
+						<p>Precio: $ 1,00</p>
+						<p>Cantidad: 625 ml</p>
+						<p>Unidades por empaque: 12 Unidades</p>
+					</div>
+				</div>
+			</div>
+				<div class="pinWrapper">
+					  <div class="image"></div>
+				</div>
 	  	</div>
 	  	<!-- FIN ESPACIO EVENTO 3 -->
 
@@ -729,6 +789,20 @@
 				// $(botella).
 				// alert(element);
 			});
+
+			/* ------------------------------------ */
+			/* 	Portafolio Movil Eventos
+			/* ------------------------------------ */
+			$('ul.tabs li').click(function(){
+				var tab_id = $(this).attr('data-tab');
+
+				$('ul.tabs li').removeClass('current');
+				$('.tab-content').removeClass('current');
+
+				$(this).addClass('current');
+				$("#"+tab_id).addClass('current');
+			})
+		
 		});
 
 	</script>
